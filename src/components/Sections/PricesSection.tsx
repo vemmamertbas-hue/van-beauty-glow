@@ -9,53 +9,64 @@ const PricesSection = () => {
 
   const priceCategories = {
     nails: {
-      title: "Nageldesign",
+      title: "Nagelmodellage",
       icon: "💅",
       services: [
-        { name: "Gel-Maniküre klassisch", price: "35", duration: "60 Min", description: "Perfekte Grundversorgung" },
-        { name: "Gel-Maniküre mit French", price: "40", duration: "75 Min", description: "Zeitloser eleganter Look" },
-        { name: "Gel-Maniküre mit Nail Art", price: "45-65", duration: "90 Min", description: "Kreative Designs nach Wunsch" },
-        { name: "Neumodellage komplett", price: "50", duration: "120 Min", description: "Komplette Nagelverlängerung" },
-        { name: "Auffüllen + Lackierung", price: "35", duration: "75 Min", description: "Regelmäßige Pflege" },
-        { name: "Reparatur pro Nagel", price: "5", duration: "15 Min", description: "Einzelnagel-Reparatur" }
+        { name: "Neumodellage Natur (10 Nägel)", price: "55", duration: "120 Min", description: "Natürlicher Look" },
+        { name: "Neumodellage French/Vollfarben", price: "60", duration: "120 Min", description: "Klassisch elegant" },
+        { name: "Neumodellage Babyboomer/Chrome", price: "70", duration: "135 Min", description: "Moderne Techniken" },
+        { name: "Verstärken/Auffüllen Natur", price: "40", duration: "75 Min", description: "Basis-Pflege" },
+        { name: "Verstärken/Auffüllen French/Vollfarben", price: "45", duration: "90 Min", description: "Mit Design" },
+        { name: "Auffrischung (bis 2. Woche)", price: "25", duration: "45 Min", description: "Schnelle Pflege" },
+        { name: "Maniküre ohne Verlängerung", price: "25", duration: "45 Min", description: "Nur Pflege" },
+        { name: "Handgemalte Blumen/Muster", price: "ab 2,50", duration: "je nach Design", description: "Individuelle Kunst" }
       ]
     },
     lashes: {
       title: "Wimpern & Augenbrauen",
       icon: "👁️",
       services: [
-        { name: "Wimpernverlängerung Classic", price: "85", duration: "120 Min", description: "1:1 Technik, natürlicher Look" },
-        { name: "Wimpernverlängerung Volume", price: "95", duration: "150 Min", description: "2D-3D Technik, mehr Volumen" },
-        { name: "Wimpernverlängerung Mega Volume", price: "110", duration: "180 Min", description: "4D+ Technik, maximales Volumen" },
-        { name: "Wimpern Refill (2-3 Wochen)", price: "45", duration: "60 Min", description: "Auffüllen bestehender Wimpern" },
-        { name: "Wimpern Refill (4+ Wochen)", price: "65", duration: "90 Min", description: "Intensives Auffüllen" },
-        { name: "Browlifting inkl. Färbung", price: "45", duration: "60 Min", description: "Augenbrauen-Laminierung" }
+        { name: "Neuset Einzeltechnik", price: "90", duration: "120 Min", description: "1:1 Technik, natürlicher Look" },
+        { name: "Auffüllen ab der 2. Woche", price: "35", duration: "60 Min", description: "Regelmäßige Pflege" },
+        { name: "Auffüllen ab der 3. Woche", price: "45", duration: "75 Min", description: "Intensiveres Auffüllen" },
+        { name: "Neuset Volumentechnik 3D & 5D", price: "110", duration: "150 Min", description: "Maximales Volumen" },
+        { name: "Auffüllen Volume 2. Woche", price: "40", duration: "60 Min", description: "Volume Refill" },
+        { name: "Auffüllen Volume 3. Woche", price: "50", duration: "75 Min", description: "Volume Intensiv-Refill" },
+        { name: "Wimpern entfernen", price: "15", duration: "30 Min", description: "Professionelle Entfernung" },
+        { name: "Wimpernlifting inkl. Färben", price: "50", duration: "60 Min", description: "Natürliches Lifting" },
+        { name: "Browlifting inkl. Färben", price: "45", duration: "60 Min", description: "Augenbrauen-Laminierung" },
+        { name: "Wimpern/Augenbrauen färben", price: "10", duration: "20 Min", description: "Farb-Intensivierung" },
+        { name: "Augenbrauen zupfen", price: "8", duration: "15 Min", description: "Perfekte Form" }
       ]
     },
     pmu: {
       title: "Permanent Make-up",
       icon: "🎨",
       services: [
-        { name: "Augenbrauen Ombré", price: "280", duration: "120 Min", description: "Natürlicher Farbverlauf" },
-        { name: "Augenbrauen Powder Brows", price: "300", duration: "120 Min", description: "Pudriger, voller Look" },
-        { name: "Augenbrauen Härchenzeichnung", price: "320", duration: "150 Min", description: "Hyperrealistische Härchen" },
-        { name: "Lidstrich oben", price: "180", duration: "90 Min", description: "Perfekte Kontur" },
-        { name: "Lidstrich unten", price: "120", duration: "60 Min", description: "Sanfte Betonung" },
-        { name: "Lippen konturiert", price: "250", duration: "120 Min", description: "Definierte Lippenform" },
-        { name: "Korrektur/Auffrischung", price: "120-180", duration: "90 Min", description: "Nach 12-18 Monaten" }
+        { name: "Augenbrauen PMU", price: "300", duration: "120 Min", description: "Professionelle PMU Technik" },
+        { name: "Lidstrich oben", price: "240", duration: "90 Min", description: "Perfekte obere Lidlinie" },
+        { name: "Lidstrich unten", price: "220", duration: "60 Min", description: "Untere Lidbetonung" },
+        { name: "Lippenkontur", price: "300", duration: "120 Min", description: "Definierte Lippenform" },
+        { name: "Lippenpigmentierung", price: "450", duration: "150 Min", description: "Vollständige Lippenfüllung" },
+        { name: "Auffrischung (2 Monate)", price: "55", duration: "60 Min", description: "Nachbehandlung inklusive" }
       ]
     },
     other: {
-      title: "Weitere Leistungen",
+      title: "Weitere Services",
       icon: "✨",
       services: [
-        { name: "Zahnbleaching", price: "89", duration: "90 Min", description: "Professionelle Aufhellung" },
-        { name: "Gesicht Waxing komplett", price: "25", duration: "30 Min", description: "Augenbrauen, Oberlippe, Kinn" },
-        { name: "Augenbrauen zupfen", price: "12", duration: "20 Min", description: "Perfekte Form" },
-        { name: "Oberlippe waxen", price: "8", duration: "10 Min", description: "Sanfte Haarentfernung" },
-        { name: "Bikinizone klassisch", price: "25", duration: "30 Min", description: "Brazilian Waxing" },
-        { name: "Beine komplett", price: "45", duration: "60 Min", description: "Glatte Beine" },
-        { name: "Achseln", price: "15", duration: "15 Min", description: "Schnell und gründlich" }
+        { name: "Zahnaufhellung Light (20min)", price: "80", duration: "30 Min", description: "1-3 Farbnuancen heller" },
+        { name: "Zahnaufhellung Master (40min)", price: "100", duration: "50 Min", description: "3-5 Farbnuancen heller" },
+        { name: "Zahnaufhellung Premium (60min)", price: "120", duration: "70 Min", description: "5-9 Farbnuancen heller" },
+        { name: "Haarentfernung Oberlippe", price: "5", duration: "10 Min", description: "Sanfte Entfernung" },
+        { name: "Haarentfernung Augenbrauen", price: "10", duration: "15 Min", description: "Präzise Formung" },
+        { name: "Haarentfernung Achsel", price: "15", duration: "20 Min", description: "Gründliche Behandlung" },
+        { name: "Haarentfernung Arme komplett", price: "25", duration: "45 Min", description: "Vollständige Arme" },
+        { name: "Haarentfernung Bikini Zone", price: "20", duration: "30 Min", description: "Professionell & diskret" },
+        { name: "Haarentfernung Beine Unterschenkel", price: "25", duration: "45 Min", description: "Glatte Unterschenkel" },
+        { name: "Haarentfernung Beine komplett", price: "35", duration: "60 Min", description: "Komplette Beinbehandlung" },
+        { name: "Haarentfernung Brust", price: "35", duration: "45 Min", description: "Schonende Behandlung" },
+        { name: "Haarentfernung Rücken", price: "40", duration: "50 Min", description: "Gründliche Rückenbehandlung" }
       ]
     }
   };

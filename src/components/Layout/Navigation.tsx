@@ -15,13 +15,40 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [activeSection, setActiveSection] = useState('hero');
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offset = 80; // Navigation height offset
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
       setIsOpen(false);
     }
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '-80px 0px' }
+    );
+
+    navItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const whatsappUrl = "https://wa.me/4917398573699?text=Hallo! Ich würde gerne einen Termin vereinbaren.";
 
@@ -56,7 +83,11 @@ const Navigation = () => {
               <button 
                 key={item.id}
                 onClick={() => scrollToSection(item.id)} 
-                className="nav-link"
+                className={`relative nav-link transition-all duration-300 ${
+                  activeSection === item.id 
+                    ? 'text-primary after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full after:scale-x-100' 
+                    : 'after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300'
+                }`}
               >
                 {item.label}
               </button>
@@ -105,7 +136,11 @@ const Navigation = () => {
                 <button 
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-3 text-foreground hover:text-primary hover:bg-primary/10 font-medium rounded-lg transition-all duration-300"
+                  className={`block w-full text-left px-4 py-3 font-medium rounded-lg transition-all duration-300 ${
+                    activeSection === item.id 
+                      ? 'text-primary bg-primary/10 border-l-4 border-primary' 
+                      : 'text-foreground hover:text-primary hover:bg-primary/5'
+                  }`}
                 >
                   {item.label}
                 </button>

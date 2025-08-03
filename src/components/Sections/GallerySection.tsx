@@ -28,76 +28,152 @@ const GallerySection = () => {
     { key: 'brows', title: 'Augenbrauen', icon: User }
   ];
 
-  // Logisch passende Galerie-Items mit echten Beauty-Fotos
+  // ECHTE Van Nagelstudio Bilder - alle WhatsApp Uploads integriert
   const galleryItems = [
+    // Studio & Preisliste
     {
-      category: 'nails',
-      title: 'Elegante Gel-Nägel',
-      description: 'Schwarzes Design mit Gold-Akzenten - ein Klassiker',
-      image: nailsBlackGold,
+      category: 'alle',
+      title: 'Preisliste Van Nagelstudio',
+      description: 'Alle unsere Services und Preise im Überblick',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.43.jpeg',
       isBeforeAfter: false
     },
     {
-      category: 'nails',
-      title: 'Artistisches Nageldesign',
-      description: 'Kreative Muster und aufwendige Designs',
-      image: nailsArtistic,
-      isBeforeAfter: false
-    },
-    {
-      category: 'nails',
-      title: 'Natural Pink Manicure',
-      description: 'Natürliche Eleganz mit rosa Akzenten',
-      image: nailsNaturalPink,
-      isBeforeAfter: false
-    },
-    {
-      category: 'lashes',
-      title: 'Wimpernverlängerung Prozess',
-      description: 'Professionelle Applikation in unserem Studio',
-      image: lashesApplication,
-      isBeforeAfter: true
-    },
-    {
-      category: 'lashes',
-      title: 'Volume Wimpernverlängerung',
-      description: 'Dramatisches Volumen für den besonderen Look',
-      image: lashesVolume,
-      isBeforeAfter: false
-    },
-    {
-      category: 'pmu',
-      title: 'PMU Augenbrauen Arbeit',
-      description: 'Professionelle Permanent Make-up Technik',
-      image: pmuBrowsWork,
-      isBeforeAfter: true
-    },
-    {
-      category: 'pmu',
-      title: 'Ombré Augenbrauen',
-      description: 'Perfekt geformte Brauen mit Ombré-Technik',
-      image: pmuOmbre,
-      isBeforeAfter: false
-    },
-    {
-      category: 'brows',
-      title: 'Browlifting Transformation',
-      description: 'Vorher/Nachher einer Augenbrauen-Behandlung',
-      image: browliftingTransformation,
-      isBeforeAfter: true
-    },
-    {
-      category: 'brows',
-      title: 'Browlifting Ergebnis',
-      description: 'Perfekt geformte und gehobene Augenbrauen',
-      image: browliftingResult,
+      category: 'alle', 
+      title: 'Van Nagelstudio - Mutter & Tochter Team',
+      description: 'Familienunternehmen seit 2000 - Van & Maily',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.44.jpeg',
       isBeforeAfter: false
     },
     {
       category: 'alle',
-      title: 'Van & MaiLy Studio',
-      description: 'Unser Team bei der professionellen Arbeit',
-      image: vanMailyStudio,
+      title: 'Team Foto - Van & Maily',
+      description: 'Professionelles Mutter-Tochter Beauty Team',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.48.jpeg',
+      isBeforeAfter: false
+    },
+    // Zertifikate & Qualifikationen
+    {
+      category: 'alle',
+      title: 'LCN Power Workshop Zertifikat',
+      description: 'Professionelle Weiterbildung - Thu van Hoang',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.46.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'alle',
+      title: 'Purebeau Pro PMU Zertifikat',
+      description: 'Elite Workshop Permanent Make-up Zertifikat',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.47.jpeg',
+      isBeforeAfter: false
+    },
+    // Wimpern - Echte Arbeiten
+    {
+      category: 'lashes',
+      title: 'Wimpernverlängerung Vorher/Nachher',
+      description: 'Natürliche Wimpernverlängerung - perfektes Ergebnis',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.49.jpeg',
+      isBeforeAfter: true
+    },
+    {
+      category: 'lashes',
+      title: 'Volume Wimpern Detail',
+      description: 'Professionelle Volumen Technik in Perfektion',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.50.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'lashes',
+      title: 'Einzelwimpern Technik',
+      description: 'Natürliche 1:1 Wimpernverlängerung',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.45 (1).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'lashes', 
+      title: 'Wimpernlifting + Färbung',
+      description: 'Natürliches Lifting für perfekte Wimpern',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.45 (2).jpeg',
+      isBeforeAfter: false
+    },
+    // Nägel - Echte Designs
+    {
+      category: 'nails',
+      title: 'Bunte Nageldesign Kollektion',
+      description: 'Kreative French und Vollfarben Designs',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.51.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Chrome Mirror Effekt Nägel',
+      description: 'Luxuriöse spiegelnde Chrome-Maniküre',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.52.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Elegante French Maniküre',
+      description: 'Klassische French mit modernem Touch',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (1).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Gel-Nagelmodellage',
+      description: 'Hochwertige Gelmodellage in Perfektion',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (2).jpeg', 
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Sommer Nagelkunst',
+      description: 'Frische sommerliche Nageldesigns',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (3).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Babyboomer Style',
+      description: 'Eleganter natürlicher Babyboomer Look',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.46 (3).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Glitzer Akzente',
+      description: 'Glamouröse Glitzer-Details und Effekte',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.47 (1).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'nails',
+      title: 'Marmor Effekt Design',
+      description: 'Kunstvoller Marmor-Look auf den Nägeln',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.47 (2).jpeg',
+      isBeforeAfter: false
+    },
+    // PMU & Brows
+    {
+      category: 'pmu',
+      title: 'Permanent Make-up Augenbrauen',
+      description: 'Professionelle PMU Technik für perfekte Brauen',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.45 (3).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'brows',
+      title: 'Browlifting Behandlung',
+      description: 'Augenbrauen-Lifting für die perfekte Form',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.46 (1).jpeg',
+      isBeforeAfter: false
+    },
+    // Studio Setup
+    {
+      category: 'alle',
+      title: 'Professioneller Arbeitsplatz',
+      description: 'Hochwertige Ausstattung für beste Ergebnisse',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.46 (2).jpeg',
       isBeforeAfter: false
     }
   ];
