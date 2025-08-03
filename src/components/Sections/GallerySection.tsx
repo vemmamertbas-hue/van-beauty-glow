@@ -5,18 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Heart, Sparkles, Eye, User, Star, MessageCircle } from 'lucide-react';
 
-// Import gallery images - logisch passende Fotos
-import nailsBlackGold from '@/assets/gallery/nails-black-gold.jpg';
-import nailsArtistic from '@/assets/gallery/nails-artistic.jpg';
-import nailsNaturalPink from '@/assets/gallery/nails-natural-pink.jpg';
-import lashesApplication from '@/assets/gallery/lashes-application.jpg';
-import lashesVolume from '@/assets/gallery/lashes-volume.jpg';
-import pmuBrowsWork from '@/assets/gallery/pmu-brows-work.jpg';
-import pmuOmbre from '@/assets/gallery/pmu-ombre.jpg';
-import browliftingTransformation from '@/assets/gallery/browlifting-transformation.jpg';
-import browliftingResult from '@/assets/gallery/browlifting-result.jpg';
-import vanMailyStudio from '@/assets/gallery/van-maily-studio.jpg';
-
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
@@ -30,117 +18,113 @@ const GallerySection = () => {
     { key: 'team', title: 'Team', icon: User }
   ];
 
-  // ECHTE Van Nagelstudio Bilder - alle WhatsApp Uploads integriert
+  // ECHTE Van Nagelstudio Bilder - funktionierend sortiert
   const galleryItems = [
     // Team Fotos
     {
       category: 'team',
-      title: 'Van Nagelstudio - Mutter & Tochter Team',
+      title: 'Van & Maily - Professionelles Team',
       description: 'Familienunternehmen seit 2000 - Van & Maily',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/van-maily-studio.jpg',
+      image: '/lovable-uploads/78ef64ac-6b44-4b28-92ec-2de18fd3bc52.png',
       isBeforeAfter: false
     },
-    {
-      category: 'team',
-      title: 'Team Foto - Van & Maily',
-      description: 'Professionelles Mutter-Tochter Beauty Team',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.48.jpeg',
-      isBeforeAfter: false
-    },
-    // Zertifikate & Qualifikationen
-    {
-      category: 'certificates',
-      title: 'LCN Power Workshop Zertifikat',
-      description: 'Professionelle Weiterbildung - Thu van Hoang',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.46.jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'certificates',
-      title: 'Purebeau Pro PMU Zertifikat',
-      description: 'Elite Workshop Permanent Make-up Zertifikat',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.47.jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'certificates',
-      title: 'Professionelle Zertifizierung',
-      description: 'Weitere Qualifikation aus unserer Weiterbildung',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.47%20(3).jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'certificates',
-      title: 'Beauty Ausbildung Zertifikat',
-      description: 'Kompetenz und Qualität zertifiziert',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.47%20(4).jpeg',
-      isBeforeAfter: false
-    },
-    // Wimpern - Echte Arbeiten
-    {
-      category: 'lashes',
-      title: 'Professionelle Wimpernverlängerung',
-      description: 'Perfekte Volume-Technik für traumhafte Wimpern',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/lashes-application.jpg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'lashes',
-      title: 'Volume Wimpern',
-      description: 'Voluminöse und natürliche Wimpernverlängerung',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/lashes-volume.jpg',
-      isBeforeAfter: false
-    },
-    // Nägel - Echte Designs
+    
+    // Nageldesign
     {
       category: 'nails',
       title: 'Kunstvolle Nageldesigns',
       description: 'Kreative und einzigartige Nagelkunst',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/nails-artistic.jpg',
+      image: '/src/assets/gallery/nails-artistic.jpg',
       isBeforeAfter: false
     },
     {
       category: 'nails',
       title: 'Elegante Schwarz-Gold Designs',
       description: 'Luxuriöse Schwarz-Gold Maniküre',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/nails-black-gold.jpg',
+      image: '/src/assets/gallery/nails-black-gold.jpg',
       isBeforeAfter: false
     },
     {
       category: 'nails',
       title: 'Natürliche Pink Töne',
       description: 'Sanfte und natürliche Nageldesigns',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/nails-natural-pink.jpg',
+      image: '/src/assets/gallery/nails-natural-pink.jpg',
       isBeforeAfter: false
     },
+    
+    // Wimpern
+    {
+      category: 'lashes',
+      title: 'Professionelle Wimpernverlängerung',
+      description: 'Perfekte Volume-Technik für traumhafte Wimpern',
+      image: '/src/assets/gallery/lashes-application.jpg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'lashes',
+      title: 'Volume Wimpern',
+      description: 'Voluminöse und natürliche Wimpernverlängerung',
+      image: '/src/assets/gallery/lashes-volume.jpg',
+      isBeforeAfter: false
+    },
+    
     // PMU & Brows
     {
       category: 'pmu',
       title: 'Permanent Make-up Augenbrauen',
       description: 'Professionelle PMU Technik für perfekte Brauen',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/pmu-brows-work.jpg',
+      image: '/src/assets/gallery/pmu-brows-work.jpg',
       isBeforeAfter: false
     },
     {
       category: 'pmu',
       title: 'Ombre PMU Technik',
       description: 'Sanfter Ombre-Effekt für natürliche Augenbrauen',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/pmu-ombre.jpg',
+      image: '/src/assets/gallery/pmu-ombre.jpg',
       isBeforeAfter: false
     },
     {
       category: 'brows',
       title: 'Browlifting Ergebnis',
       description: 'Perfekte Augenbrauen-Form durch professionelles Lifting',
-      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/browlifting-result.jpg',
+      image: '/src/assets/gallery/browlifting-result.jpg',
       isBeforeAfter: true
     },
-    // Studio Setup
+    
+    // Zertifikate - ALLE in richtiger Kategorie
     {
-      category: 'alle',
-      title: 'Professioneller Arbeitsplatz',
-      description: 'Hochwertige Ausstattung für beste Ergebnisse',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.46 (2).jpeg',
+      category: 'certificates',
+      title: 'Thu van Hoang - Ausbildungszertifikat',
+      description: 'Cosmetique Nagelmodelage der Premiumklasse',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.44.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'certificates',
+      title: 'Thu Van Hoang - Basiskenntnisse',
+      description: 'Basiskenntnisse Cosmetique Nagelmodelage der Premiumklasse',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (1).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'certificates',
+      title: 'Permanent Make-up Fortbildung',
+      description: 'Zertifikat für Permanent Make-up Ausbildung',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.52.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'certificates',
+      title: 'Weitere Qualifikationen',
+      description: 'Zusätzliche Ausbildungszertifikate',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.46.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'certificates',
+      title: 'Professionelle Zertifizierung',
+      description: 'Weitere Qualifikation aus unserer Weiterbildung',
+      image: '/WhatsApp Image 2025-08-03 at 22.02.47.jpeg',
       isBeforeAfter: false
     }
   ];

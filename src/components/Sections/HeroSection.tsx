@@ -77,7 +77,7 @@ const HeroSection = () => {
             <div className="animate-[hero-fade-in_1s_ease-out_0.6s_both] text-center lg:text-right">
               <div className="relative inline-block">
                 <img
-                  src="https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-04%20at%2000.33.09.jpeg"
+                  src="/lovable-uploads/78ef64ac-6b44-4b28-92ec-2de18fd3bc52.png"
                   alt="Van & Maily - Mutter-Tochter Beauty Team"
                   className="w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-white/20 hover:scale-105 transition-all duration-500 filter brightness-110"
                 />

@@ -213,8 +213,35 @@ const PricesSection = () => {
           </Card>
         </div>
 
+        {/* Ausfallgebühr Information */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-accent/10 backdrop-blur-sm border border-accent/30 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-center mb-4 text-foreground">
+              📋 Terminabsage - Wichtige Infos
+            </h3>
+            <div className="space-y-4 text-sm text-foreground/80">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs">⚠️</span>
+                </div>
+                <p>
+                  <strong>Min. 24 Stunden vorher absagen</strong> - ansonsten wird die <strong>Hälfte des Preises</strong> für die Behandlung als Gebühr fällig.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs">⚠️</span>
+                </div>
+                <p>
+                  Bei Absagen von <strong>Permanent-Makeup Terminen</strong> wird die <strong>Anzahlung von 50€</strong> einbehalten.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Payment Info */}
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
           <div className="inline-flex items-center bg-card/80 backdrop-blur-sm border border-border/50 rounded-full px-6 py-3">
             <div className="flex items-center space-x-6 text-sm text-foreground/70">
               <div className="flex items-center">
