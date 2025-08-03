@@ -204,14 +204,14 @@
 
   /* Service-Karten */
   .service-card {
-    @apply group relative bg-gradient-to-br from-card to-secondary/30 rounded-2xl p-8 border border-border/30;
+    @apply relative bg-gradient-to-br from-card to-secondary/30 rounded-2xl p-8 border border-border/30;
     @apply hover:shadow-elegant hover:scale-[1.02] transition-all duration-500;
     @apply hover:border-primary/30;
   }
 
   .service-icon {
     @apply w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center text-primary-foreground;
-    @apply group-hover:scale-110 group-hover:rotate-3 transition-all duration-300;
+    @apply transition-all duration-300;
   }
 
   /* Navigation */

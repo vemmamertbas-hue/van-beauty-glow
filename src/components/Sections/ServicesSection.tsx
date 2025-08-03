@@ -70,9 +70,9 @@ const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className="service-card group">
               {/* Service Icon */}
-              <div className="service-icon mb-6">
+              <div className="service-icon group-hover:scale-110 group-hover:rotate-3 mb-6">
                 <service.icon className="w-8 h-8" />
               </div>
 
