@@ -28,26 +28,26 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-background section-divider">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Was unsere <span className="bg-gradient-primary bg-clip-text text-transparent">Kundinnen</span> sagen
+    <section id="testimonials" className="section-padding bg-background section-divider">
+      <div className="container-padding">
+        <div className="section-header">
+          <h2 className="heading-lg mb-6">
+            Was unsere <span className="gradient-text">Kundinnen</span> sagen
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-xl text-muted max-w-3xl mx-auto">
             Über 500 zufriedene Kundinnen vertrauen bereits auf unsere Expertise
           </p>
           
           {/* Overall Rating */}
           <div className="flex items-center justify-center mt-8">
-            <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 animate-float">
+            <div className="card-clean p-6 animate-[float_6s_ease-in-out_infinite]">
               <div className="flex items-center justify-center space-x-2 mb-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-accent text-accent animate-pulse-soft" style={{ animationDelay: `${i * 0.1}s` }} />
+                  <Star key={i} className="w-6 h-6 fill-accent text-accent animate-[pulse-soft_2s_cubic-bezier(0.4,0,0.6,1)_infinite]" style={{ animationDelay: `${i * 0.1}s` }} />
                 ))}
               </div>
-              <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">5.0</div>
-              <div className="text-sm text-foreground/60">Basierend auf 500+ Bewertungen</div>
+              <div className="text-3xl font-bold gradient-text">5.0</div>
+              <div className="text-sm text-muted">Basierend auf 500+ Bewertungen</div>
             </div>
           </div>
         </div>

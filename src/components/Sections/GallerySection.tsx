@@ -110,22 +110,22 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-background section-divider">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Unsere <span className="bg-gradient-primary bg-clip-text text-transparent">Galerie</span>
+    <section id="gallery" className="section-padding bg-background section-divider">
+      <div className="container-padding">
+        <div className="section-header">
+          <h2 className="heading-lg mb-6">
+            Unsere <span className="gradient-text">Galerie</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-xl text-muted max-w-3xl mx-auto">
             Lassen Sie sich von unseren Arbeiten inspirieren. Jedes Bild erzählt die Geschichte 
             einer zufriedenen Kundin und zeigt unser Können.
           </p>
         </div>
 
         <Tabs defaultValue="alle" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8 bg-card/80 backdrop-blur-sm border border-border/30 h-auto p-2">
+          <TabsList className="grid w-full grid-cols-5 mb-8 card-clean h-auto p-2">
             {galleryCategories.map((category) => (
-              <TabsTrigger 
+              <TabsTrigger
                 key={category.key}
                 value={category.key} 
                 className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 hover:bg-primary/10 flex flex-col items-center p-4 gap-2 group"
@@ -138,11 +138,11 @@ const GallerySection = () => {
 
           {galleryCategories.map((category) => (
             <TabsContent key={category.key} value={category.key}>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-4 grid-responsive">
                 {filterItems(category.key).map((item, index) => (
                   <div
                     key={index}
-                    className="group relative overflow-hidden rounded-xl shadow-card hover:shadow-elegant transition-all duration-500 cursor-pointer"
+                    className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 cursor-pointer"
                     onClick={() => setSelectedImage(item)}
                   >
                     <div className="relative group overflow-hidden rounded-xl">
@@ -178,17 +178,17 @@ const GallerySection = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-primary/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 max-w-2xl mx-auto">
-            <h3 className="font-playfair text-2xl font-semibold text-foreground mb-4">
+          <div className="card-feature max-w-2xl mx-auto">
+            <h3 className="heading-md mb-4">
               Lass uns dein nächstes Kunstwerk schaffen
             </h3>
-            <p className="text-foreground/70 mb-6">
+            <p className="text-muted mb-6">
               Jede Behandlung ist ein individuelles Kunstwerk. Vereinbare jetzt deinen Termin und werde 
               Teil unserer wunderschönen Galerie.
             </p>
             <Button
               onClick={() => window.open("https://wa.me/4917398573699?text=Hallo! Ich möchte gerne einen Termin vereinbaren.", '_blank')}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="btn-hero"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Jetzt Termin vereinbaren
@@ -197,22 +197,22 @@ const GallerySection = () => {
         </div>
 
         {/* Featured Stats */}
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-border/30 hover:shadow-card transition-all duration-300">
-            <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">500+</div>
-            <div className="text-sm text-foreground/70">Kunstwerke erschaffen</div>
+        <div className="mt-12 grid grid-4 grid-responsive">
+          <div className="text-center p-6 card-clean hover:shadow-md transition-all duration-300">
+            <div className="text-3xl font-bold gradient-text mb-2">500+</div>
+            <div className="text-sm text-muted">Kunstwerke erschaffen</div>
           </div>
-          <div className="text-center p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-border/30 hover:shadow-card transition-all duration-300">
-            <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">20+</div>
-            <div className="text-sm text-foreground/70">Jahre Erfahrung</div>
+          <div className="text-center p-6 card-clean hover:shadow-md transition-all duration-300">
+            <div className="text-3xl font-bold gradient-text mb-2">20+</div>
+            <div className="text-sm text-muted">Jahre Erfahrung</div>
           </div>
-          <div className="text-center p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-border/30 hover:shadow-card transition-all duration-300">
-            <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">100%</div>
-            <div className="text-sm text-foreground/70">Kundenzufriedenheit</div>
+          <div className="text-center p-6 card-clean hover:shadow-md transition-all duration-300">
+            <div className="text-3xl font-bold gradient-text mb-2">100%</div>
+            <div className="text-sm text-muted">Kundenzufriedenheit</div>
           </div>
-          <div className="text-center p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-border/30 hover:shadow-card transition-all duration-300">
-            <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">⭐</div>
-            <div className="text-sm text-foreground/70">5.0 Sterne Bewertung</div>
+          <div className="text-center p-6 card-clean hover:shadow-md transition-all duration-300">
+            <div className="text-3xl font-bold gradient-text mb-2">⭐</div>
+            <div className="text-sm text-muted">5.0 Sterne Bewertung</div>
           </div>
         </div>
       </div>

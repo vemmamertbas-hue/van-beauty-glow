@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Star, Calendar } from 'lucide-react';
+import { MessageCircle, Star, Calendar, Award } from 'lucide-react';
 import heroImage from '@/assets/hero-studio.jpg';
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
   const fullText = 'Schönheit, die bleibt. Vertrauen, das wächst.';
-  const whatsappUrl = "https://wa.me/491739857369?text=Hallo%20Van%20Nagelstudio%2C%20ich%20möchte%20gerne%20einen%20Termin%20vereinbaren.";
+  const whatsappUrl = "https://wa.me/4917398573699?text=Hallo! Ich würde gerne einen Termin vereinbaren.";
 
   useEffect(() => {
     let i = 0;
@@ -24,71 +24,65 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Clean Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Van Nagelstudio Interior"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/50"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-white/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent"></div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-float"></div>
-      <div className="absolute bottom-32 right-16 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-glow/30 rounded-full blur-lg animate-pulse-soft"></div>
-
       {/* Hero Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="hero-fade-in">
-          {/* Stars Badge */}
-          <div className="inline-flex items-center bg-card/80 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <div className="flex items-center space-x-1 mr-2">
+      <div className="relative z-10 container-padding text-center">
+        <div className="max-w-4xl mx-auto space-content">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center card-clean px-6 py-3 mb-8 animate-[hero-fade-in_1s_ease-out_0.3s_both]">
+            <div className="flex items-center space-x-2 mr-3">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-accent text-accent" />
               ))}
             </div>
-            <span className="text-sm font-medium text-foreground">5.0 • Über 500 zufriedene Kundinnen</span>
+            <span className="text-sm font-medium text-foreground">5.0 • 500+ zufriedene Kundinnen</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="heading-xl mb-6 animate-[hero-fade-in_1s_ease-out_0.5s_both]">
             Van Nagelstudio &{' '}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="gradient-text">
               Cosmetics
             </span>
           </h1>
 
           {/* Typewriter Subtitle */}
-          <div className="h-16 mb-8">
-            <p className="font-playfair text-xl sm:text-2xl lg:text-3xl text-foreground/80 italic">
+          <div className="h-16 mb-8 animate-[hero-fade-in_1s_ease-out_0.7s_both]">
+            <p className="font-playfair text-xl sm:text-2xl lg:text-3xl text-muted italic">
               {displayText}
               <span className="animate-pulse">|</span>
             </p>
           </div>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto mb-8 leading-relaxed animate-[hero-fade-in_1s_ease-out_0.9s_both]">
             Seit über 20 Jahren stehen wir für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up in Osnabrück. 
             Lass dich von Van & MaiLy verwöhnen.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-[hero-fade-in_1s_ease-out_1.1s_both]">
             <Button
               onClick={() => window.open(whatsappUrl, '_blank')}
-              className="btn-hero group"
+              className="btn-hero mobile-full sm:w-auto"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+              <MessageCircle className="w-5 h-5 mr-2" />
               <span>Jetzt Termin vereinbaren</span>
             </Button>
             
             <Button
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              variant="outline"
-              className="px-8 py-4 border-2 border-primary/30 hover:border-primary bg-card/50 backdrop-blur-sm hover:bg-primary/10 transition-all duration-300"
+              className="btn-secondary mobile-full sm:w-auto"
             >
               <Calendar className="w-5 h-5 mr-2" />
               <span>Unsere Leistungen</span>
@@ -96,10 +90,10 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-foreground/60">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-muted animate-[hero-fade-in_1s_ease-out_1.3s_both]">
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
-              <span>Über 20 Jahre Erfahrung</span>
+              <Award className="w-4 h-4 text-accent mr-2" />
+              <span>20+ Jahre Erfahrung</span>
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
@@ -114,9 +108,9 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
         <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+          <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
         </div>
       </div>
     </section>
