@@ -144,7 +144,7 @@ const GallerySection = () => {
           <h2 className="heading-lg mb-6">
             Unsere <span className="gradient-text">Galerie</span>
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Lassen Sie sich von unseren Arbeiten inspirieren. Jedes Bild erzählt die Geschichte 
             einer zufriedenen Kundin und zeigt unser Können.
           </p>
