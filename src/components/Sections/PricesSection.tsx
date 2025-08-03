@@ -14,27 +14,39 @@ const PricesSection = () => {
       services: [
         { name: "Neumodellage Natur (10 Nägel)", price: "55", duration: "120 Min", description: "Natürlicher Look" },
         { name: "Neumodellage French/Vollfarben", price: "60", duration: "120 Min", description: "Klassisch elegant" },
-        { name: "Neumodellage Babyboomer/Chrome", price: "70", duration: "135 Min", description: "Moderne Techniken" },
+        { name: "Neumodellage Babyboomer/Chrome/Marmor", price: "70", duration: "135 Min", description: "Moderne Techniken" },
         { name: "Verstärken/Auffüllen Natur", price: "40", duration: "75 Min", description: "Basis-Pflege" },
         { name: "Verstärken/Auffüllen French/Vollfarben", price: "45", duration: "90 Min", description: "Mit Design" },
         { name: "Auffrischung (bis 2. Woche)", price: "25", duration: "45 Min", description: "Schnelle Pflege" },
-        { name: "Maniküre ohne Verlängerung", price: "25", duration: "45 Min", description: "Nur Pflege" },
-        { name: "Handgemalte Blumen/Muster", price: "ab 2,50", duration: "je nach Design", description: "Individuelle Kunst" }
+        { name: "Maniküre", price: "25", duration: "45 Min", description: "Professionelle Maniküre" },
+        { name: "Handgemalte Blumen/Muster pro Nagel", price: "ab 2,50", duration: "je nach Design", description: "Individuelle Kunst" },
+        { name: "Strasssteine pro Stück", price: "0,50", duration: "5 Min", description: "Glitzer-Akzente" },
+        { name: "Glitzer pro Nagel", price: "0,50", duration: "5 Min", description: "Glamour-Effekt" }
+      ]
+    },
+    feet: {
+      title: "Füße",
+      icon: "🦶",
+      services: [
+        { name: "Fußpflege", price: "30", duration: "60 Min", description: "Professionelle Fußpflege" },
+        { name: "Gelmodellage French/Vollfarben", price: "35", duration: "75 Min", description: "Schöne Füße" },
+        { name: "Fußpflege mit Gelmodellage", price: "45", duration: "90 Min", description: "Komplett-Behandlung" },
+        { name: "Wellnessfußpflege (Fußbad, Peeling, Öl-Massage)", price: "45", duration: "75 Min", description: "Verwöhnung pur" }
       ]
     },
     lashes: {
-      title: "Wimpern & Augenbrauen",
+      title: "Wimpernverlängerung",
       icon: "👁️",
       services: [
         { name: "Neuset Einzeltechnik", price: "90", duration: "120 Min", description: "1:1 Technik, natürlicher Look" },
         { name: "Auffüllen ab der 2. Woche", price: "35", duration: "60 Min", description: "Regelmäßige Pflege" },
         { name: "Auffüllen ab der 3. Woche", price: "45", duration: "75 Min", description: "Intensiveres Auffüllen" },
-        { name: "Neuset Volumentechnik 3D & 5D", price: "110", duration: "150 Min", description: "Maximales Volumen" },
+        { name: "Neuset Volumentechnik", price: "110", duration: "150 Min", description: "Maximales Volumen" },
         { name: "Auffüllen Volume 2. Woche", price: "40", duration: "60 Min", description: "Volume Refill" },
         { name: "Auffüllen Volume 3. Woche", price: "50", duration: "75 Min", description: "Volume Intensiv-Refill" },
         { name: "Wimpern entfernen", price: "15", duration: "30 Min", description: "Professionelle Entfernung" },
-        { name: "Wimpernlifting inkl. Färben", price: "50", duration: "60 Min", description: "Natürliches Lifting" },
-        { name: "Browlifting inkl. Färben", price: "45", duration: "60 Min", description: "Augenbrauen-Laminierung" },
+        { name: "Wimpernlifting inklusive färben", price: "50", duration: "60 Min", description: "Natürliches Lifting" },
+        { name: "Browlifting inklusive färben", price: "45", duration: "60 Min", description: "Augenbrauen-Laminierung" },
         { name: "Wimpern/Augenbrauen färben", price: "10", duration: "20 Min", description: "Farb-Intensivierung" },
         { name: "Augenbrauen zupfen", price: "8", duration: "15 Min", description: "Perfekte Form" }
       ]
@@ -51,22 +63,37 @@ const PricesSection = () => {
         { name: "Auffrischung (2 Monate)", price: "55", duration: "60 Min", description: "Nachbehandlung inklusive" }
       ]
     },
-    other: {
-      title: "Weitere Services",
+    teeth: {
+      title: "Zahnaufhellung",
+      icon: "😁",
+      services: [
+        { name: "Light 20min (1-3 Farbnuancen heller)", price: "80", duration: "30 Min", description: "Sanfte Aufhellung" },
+        { name: "Master 40min (3-5 Farbnuancen heller)", price: "100", duration: "50 Min", description: "Mittlere Aufhellung" },
+        { name: "Premium 60min (5-9 Farbnuancen heller)", price: "120", duration: "70 Min", description: "Maximale Aufhellung" },
+        { name: "Auffrischen (nur innerhalb 2 Monaten)", price: "55", duration: "30 Min", description: "Nachbehandlung" }
+      ]
+    },
+    waxing: {
+      title: "Haarentfernung mit Wachs",
       icon: "✨",
       services: [
-        { name: "Zahnaufhellung Light (20min)", price: "80", duration: "30 Min", description: "1-3 Farbnuancen heller" },
-        { name: "Zahnaufhellung Master (40min)", price: "100", duration: "50 Min", description: "3-5 Farbnuancen heller" },
-        { name: "Zahnaufhellung Premium (60min)", price: "120", duration: "70 Min", description: "5-9 Farbnuancen heller" },
-        { name: "Haarentfernung Oberlippe", price: "5", duration: "10 Min", description: "Sanfte Entfernung" },
-        { name: "Haarentfernung Augenbrauen", price: "10", duration: "15 Min", description: "Präzise Formung" },
-        { name: "Haarentfernung Achsel", price: "15", duration: "20 Min", description: "Gründliche Behandlung" },
-        { name: "Haarentfernung Arme komplett", price: "25", duration: "45 Min", description: "Vollständige Arme" },
-        { name: "Haarentfernung Bikini Zone", price: "20", duration: "30 Min", description: "Professionell & diskret" },
-        { name: "Haarentfernung Beine Unterschenkel", price: "25", duration: "45 Min", description: "Glatte Unterschenkel" },
-        { name: "Haarentfernung Beine komplett", price: "35", duration: "60 Min", description: "Komplette Beinbehandlung" },
-        { name: "Haarentfernung Brust", price: "35", duration: "45 Min", description: "Schonende Behandlung" },
-        { name: "Haarentfernung Rücken", price: "40", duration: "50 Min", description: "Gründliche Rückenbehandlung" }
+        { name: "Oberlippe", price: "5", duration: "10 Min", description: "Sanfte Entfernung" },
+        { name: "Augenbrauen", price: "10", duration: "15 Min", description: "Präzise Formung" },
+        { name: "Achsel", price: "15", duration: "20 Min", description: "Gründliche Behandlung" },
+        { name: "Arme komplett", price: "25", duration: "45 Min", description: "Vollständige Arme" },
+        { name: "Bikini Zone", price: "20", duration: "30 Min", description: "Professionell & diskret" },
+        { name: "Beine Oberschenkel", price: "30", duration: "45 Min", description: "Obere Beinpartie" },
+        { name: "Beine Unterschenkel", price: "25", duration: "30 Min", description: "Untere Beinpartie" },
+        { name: "Beine komplett", price: "35", duration: "60 Min", description: "Komplette Beinbehandlung" },
+        { name: "Brust", price: "35", duration: "45 Min", description: "Schonende Behandlung" },
+        { name: "Rücken", price: "40", duration: "50 Min", description: "Gründliche Rückenbehandlung" }
+      ]
+    },
+    beauty: {
+      title: "Schönheitsflecken",
+      icon: "💫",
+      services: [
+        { name: "Schönheitsflecken Aufreis", price: "30", duration: "30 Min", description: "Natürliche Beauty-Spots" }
       ]
     }
   };
@@ -84,7 +111,7 @@ const PricesSection = () => {
         </div>
 
         <Tabs defaultValue="nails" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-card/50 backdrop-blur-sm border border-border/30">
+          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 mb-8 bg-card/50 backdrop-blur-sm border border-border/30">
             {Object.entries(priceCategories).map(([key, category]) => (
               <TabsTrigger
                 key={key}

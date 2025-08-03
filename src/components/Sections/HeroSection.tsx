@@ -24,52 +24,74 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Clean Overlay */}
+      {/* Background Image with Improved Readability */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Van Nagelstudio Interior"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-white/50"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container-padding text-center">
-        <div className="max-w-4xl mx-auto space-content">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center card-clean px-6 py-3 mb-8 animate-[hero-fade-in_1s_ease-out_0.3s_both]">
-            <div className="flex items-center space-x-2 mr-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-              ))}
+      <div className="relative z-10 container-padding">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left space-content">
+              {/* Trust Badge */}
+              <div className="inline-flex items-center card-clean px-6 py-3 mb-8 animate-[hero-fade-in_1s_ease-out_0.3s_both] bg-white/90 backdrop-blur-sm">
+                <div className="flex items-center space-x-2 mr-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-foreground">5.0 • 500+ zufriedene Kundinnen</span>
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="heading-xl mb-6 animate-[hero-fade-in_1s_ease-out_0.5s_both] text-white">
+                Van Nagelstudio &{' '}
+                <span className="gradient-text">
+                  Cosmetics
+                </span>
+              </h1>
+
+              {/* Typewriter Subtitle */}
+              <div className="h-16 mb-8 animate-[hero-fade-in_1s_ease-out_0.7s_both]">
+                <p className="font-playfair text-xl sm:text-2xl lg:text-3xl text-white/90 italic">
+                  {displayText}
+                  <span className="animate-pulse">|</span>
+                </p>
+              </div>
+
+              {/* Description */}
+              <p className="text-lg sm:text-xl text-white/80 max-w-3xl mb-8 leading-relaxed animate-[hero-fade-in_1s_ease-out_0.9s_both]">
+                Seit über 20 Jahren stehen wir für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up in Osnabrück. 
+                Lass dich von Van & MaiLy verwöhnen.
+              </p>
             </div>
-            <span className="text-sm font-medium text-foreground">5.0 • 500+ zufriedene Kundinnen</span>
+
+            {/* Team Photo */}
+            <div className="animate-[hero-fade-in_1s_ease-out_0.6s_both] text-center lg:text-right">
+              <div className="relative inline-block">
+                <img
+                  src="/WhatsApp Image 2025-08-03 at 22.02.44.jpeg"
+                  alt="Van & Maily - Mutter-Tochter Beauty Team"
+                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-white/20 hover:scale-105 transition-all duration-500 filter brightness-110"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-primary/90 backdrop-blur-sm rounded-xl px-4 py-2 border border-white/20">
+                  <p className="text-white font-semibold text-sm">Van & Maily</p>
+                  <p className="text-white/80 text-xs">Beauty Experten seit 2000</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          {/* Main Headline */}
-          <h1 className="heading-xl mb-6 animate-[hero-fade-in_1s_ease-out_0.5s_both]">
-            Van Nagelstudio &{' '}
-            <span className="gradient-text">
-              Cosmetics
-            </span>
-          </h1>
-
-          {/* Typewriter Subtitle */}
-          <div className="h-16 mb-8 animate-[hero-fade-in_1s_ease-out_0.7s_both]">
-            <p className="font-playfair text-xl sm:text-2xl lg:text-3xl text-muted italic">
-              {displayText}
-              <span className="animate-pulse">|</span>
-            </p>
-          </div>
-
-          {/* Description */}
-          <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto mb-8 leading-relaxed animate-[hero-fade-in_1s_ease-out_0.9s_both]">
-            Seit über 20 Jahren stehen wir für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up in Osnabrück. 
-            Lass dich von Van & MaiLy verwöhnen.
-          </p>
-
+        {/* CTA Buttons & Trust Indicators - Centered below grid */}
+        <div className="text-center mt-12 space-content">
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-[hero-fade-in_1s_ease-out_1.1s_both]">
             <Button
@@ -82,7 +104,7 @@ const HeroSection = () => {
             
             <Button
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-secondary mobile-full sm:w-auto"
+              className="btn-secondary mobile-full sm:w-auto border-white/30 text-white hover:bg-white/10"
             >
               <Calendar className="w-5 h-5 mr-2" />
               <span>Unsere Leistungen</span>
@@ -90,7 +112,7 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-muted animate-[hero-fade-in_1s_ease-out_1.3s_both]">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-white/70 animate-[hero-fade-in_1s_ease-out_1.3s_both]">
             <div className="flex items-center">
               <Award className="w-4 h-4 text-accent mr-2" />
               <span>20+ Jahre Erfahrung</span>

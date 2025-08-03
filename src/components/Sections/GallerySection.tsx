@@ -25,28 +25,23 @@ const GallerySection = () => {
     { key: 'nails', title: 'Nageldesign', icon: Sparkles },
     { key: 'lashes', title: 'Wimpern', icon: Eye },
     { key: 'pmu', title: 'Permanent Make-up', icon: Heart },
-    { key: 'brows', title: 'Augenbrauen', icon: User }
+    { key: 'brows', title: 'Augenbrauen', icon: User },
+    { key: 'certificates', title: 'Zertifikate', icon: Star },
+    { key: 'team', title: 'Team', icon: User }
   ];
 
   // ECHTE Van Nagelstudio Bilder - alle WhatsApp Uploads integriert
   const galleryItems = [
-    // Studio & Preisliste
+    // Team Fotos
     {
-      category: 'alle',
-      title: 'Preisliste Van Nagelstudio',
-      description: 'Alle unsere Services und Preise im Überblick',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.43.jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'alle', 
+      category: 'team',
       title: 'Van Nagelstudio - Mutter & Tochter Team',
       description: 'Familienunternehmen seit 2000 - Van & Maily',
       image: '/WhatsApp Image 2025-08-03 at 22.02.44.jpeg',
       isBeforeAfter: false
     },
     {
-      category: 'alle',
+      category: 'team',
       title: 'Team Foto - Van & Maily',
       description: 'Professionelles Mutter-Tochter Beauty Team',
       image: '/WhatsApp Image 2025-08-03 at 22.02.48.jpeg',
@@ -54,14 +49,14 @@ const GallerySection = () => {
     },
     // Zertifikate & Qualifikationen
     {
-      category: 'alle',
+      category: 'certificates',
       title: 'LCN Power Workshop Zertifikat',
       description: 'Professionelle Weiterbildung - Thu van Hoang',
       image: '/WhatsApp Image 2025-08-03 at 22.02.46.jpeg',
       isBeforeAfter: false
     },
     {
-      category: 'alle',
+      category: 'certificates',
       title: 'Purebeau Pro PMU Zertifikat',
       description: 'Elite Workshop Permanent Make-up Zertifikat',
       image: '/WhatsApp Image 2025-08-03 at 22.02.47.jpeg',
@@ -199,7 +194,7 @@ const GallerySection = () => {
         </div>
 
         <Tabs defaultValue="alle" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8 card-clean h-auto p-2">
+          <TabsList className="grid w-full grid-cols-4 lg:grid-cols-7 mb-8 card-clean h-auto p-2">
             {galleryCategories.map((category) => (
               <TabsTrigger
                 key={category.key}
@@ -221,13 +216,17 @@ const GallerySection = () => {
                     className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 cursor-pointer"
                     onClick={() => setSelectedImage(item)}
                   >
-                    <div className="relative group overflow-hidden rounded-xl">
+                    <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                        className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-125 group-hover:brightness-125 group-hover:contrast-110 group-hover:saturate-110 filter hover:drop-shadow-2xl"
+                        style={{
+                          transform: 'perspective(1000px)',
+                          transition: 'all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                        }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
                       <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100">
                         <h4 className="font-semibold text-lg mb-2 font-playfair">{item.title}</h4>
                         <p className="text-sm text-white/90 leading-relaxed">{item.description}</p>
