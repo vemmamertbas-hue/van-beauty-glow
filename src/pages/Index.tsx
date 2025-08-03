@@ -5,9 +5,10 @@ import AboutSection from '@/components/Sections/AboutSection';
 import ServicesSection from '@/components/Sections/ServicesSection';
 import GallerySection from '@/components/Sections/GallerySection';
 import PricesSection from '@/components/Sections/PricesSection';
-import ReviewsSection from '@/components/Sections/ReviewsSection';
+import TestimonialsSection from '@/components/Sections/TestimonialsSection';
 import ContactSection from '@/components/Sections/ContactSection';
 import Footer from '@/components/Layout/Footer';
+import FloatingWhatsApp from '@/components/Layout/FloatingWhatsApp';
 
 const Index = () => {
   return (
@@ -19,10 +20,11 @@ const Index = () => {
         <ServicesSection />
         <GallerySection />
         <PricesSection />
-        <ReviewsSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
