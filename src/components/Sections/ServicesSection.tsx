@@ -128,7 +128,7 @@ const ServicesSection = () => {
                 Unsicher welche Behandlung für dich geeignet ist?
               </h3>
               <p className="text-foreground/70">
-                Lass dich kostenlos von Van & MaiLy beraten. Wir finden gemeinsam die perfekte Lösung für dich.
+                Lass dich kostenlos von Van & Maily beraten. Wir finden gemeinsam die perfekte Lösung für dich.
               </p>
             </div>
             <Button

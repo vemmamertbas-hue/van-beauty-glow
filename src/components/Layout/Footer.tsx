@@ -23,7 +23,7 @@ const Footer = () => {
                 Van Nagelstudio & Cosmetics
               </h3>
               <p className="text-background/70 leading-relaxed mb-4">
-                Seit über 20 Jahren stehen Van und MaiLy für erstklassige Beauty-Behandlungen 
+                Seit über 20 Jahren stehen Van und Maily für erstklassige Beauty-Behandlungen 
                 in Osnabrück. Vertraue auf unsere Expertise für deine natürliche Schönheit.
               </p>
               <div className="flex items-center space-x-2 mb-4">

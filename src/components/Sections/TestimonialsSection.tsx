@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Lara Nguyen",
-      text: "Ich habe lange nach einem Kosmetikstudio gesucht, dem ich vertraue – bei Van & MaiLy fühle ich mich endlich angekommen. Die Wimpernverlängerung ist wunderschön natürlich.",
+      text: "Ich habe lange nach einem Kosmetikstudio gesucht, dem ich vertraue – bei Van & Maily fühle ich mich endlich angekommen. Die Wimpernverlängerung ist wunderschön natürlich.",
       rating: 5,
       service: "Wimpernverlängerung", 
       avatar: "L"

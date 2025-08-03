@@ -7,10 +7,10 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Über <span className="bg-gradient-primary bg-clip-text text-transparent">Van & MaiLy</span>
+            Über <span className="bg-gradient-primary bg-clip-text text-transparent">Van & Maily</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            Ein Familienunternehmen mit Leidenschaft für Schönheit und Perfektion
+            Ein Familienunternehmen mit Leidenschaft für Schönheit
           </p>
         </div>
 
@@ -29,9 +29,9 @@ const AboutSection = () => {
                     Unsere Geschichte
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
-                    Seit über 20 Jahren sind Van und MaiLy ein eingespieltes Team, das Schönheitsträume wahr werden lässt. 
-                    Was als kleine Vision begann, ist heute ein etabliertes Familienunternehmen geworden, das für höchste 
-                    Qualität und persönliche Betreuung steht.
+                    Seit über 20 Jahren ist das Van Nagelstudio in Osnabrück eine feste Größe für hochwertige Nagelkunst, Wimpernverlängerung und Permanent Make-up.
+                    Gegründet von Van und geführt gemeinsam mit ihrer Tochter Maily, vereint unser Studio generationsübergreifende Erfahrung mit moderner Ästhetik.
+                    Wir glauben daran, dass wahre Schönheit in den Details liegt – und behandeln jede Kundin mit höchster Sorgfalt, Präzision und persönlichem Herzblut.
                   </p>
                 </div>
               </div>
@@ -100,10 +100,10 @@ const AboutSection = () => {
                   M
                 </div>
                 <div>
-                  <h4 className="font-playfair text-2xl font-semibold text-foreground mb-2">MaiLy</h4>
+                  <h4 className="font-playfair text-2xl font-semibold text-foreground mb-2">Maily</h4>
                   <p className="text-primary/80 font-medium mb-2">Co-Inhaberin & Wimpernexpertin</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
-                    MaiLy zaubert traumhafte Wimpernverlängerungen und ist spezialisiert auf Browlifting. 
+                    Maily zaubert traumhafte Wimpernverlängerungen und ist spezialisiert auf Browlifting. 
                     Ihre sanfte Art macht jeden Besuch zu einem entspannten Erlebnis.
                   </p>
                   <div className="flex items-center mt-3">

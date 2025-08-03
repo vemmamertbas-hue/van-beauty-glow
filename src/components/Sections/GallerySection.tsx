@@ -37,7 +37,7 @@ const GallerySection = () => {
       category: 'team',
       title: 'Van Nagelstudio - Mutter & Tochter Team',
       description: 'Familienunternehmen seit 2000 - Van & Maily',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.44.jpeg',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/van-maily-studio.jpg',
       isBeforeAfter: false
     },
     {
@@ -52,100 +52,65 @@ const GallerySection = () => {
       category: 'certificates',
       title: 'LCN Power Workshop Zertifikat',
       description: 'Professionelle Weiterbildung - Thu van Hoang',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.46.jpeg',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.46.jpeg',
       isBeforeAfter: false
     },
     {
       category: 'certificates',
       title: 'Purebeau Pro PMU Zertifikat',
       description: 'Elite Workshop Permanent Make-up Zertifikat',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.47.jpeg',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.47.jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'certificates',
+      title: 'Professionelle Zertifizierung',
+      description: 'Weitere Qualifikation aus unserer Weiterbildung',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.47%20(3).jpeg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'certificates',
+      title: 'Beauty Ausbildung Zertifikat',
+      description: 'Kompetenz und Qualität zertifiziert',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-03%20at%2022.02.47%20(4).jpeg',
       isBeforeAfter: false
     },
     // Wimpern - Echte Arbeiten
     {
       category: 'lashes',
-      title: 'Wimpernverlängerung Vorher/Nachher',
-      description: 'Natürliche Wimpernverlängerung - perfektes Ergebnis',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.49.jpeg',
-      isBeforeAfter: true
-    },
-    {
-      category: 'lashes',
-      title: 'Volume Wimpern Detail',
-      description: 'Professionelle Volumen Technik in Perfektion',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.50.jpeg',
+      title: 'Professionelle Wimpernverlängerung',
+      description: 'Perfekte Volume-Technik für traumhafte Wimpern',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/lashes-application.jpg',
       isBeforeAfter: false
     },
     {
       category: 'lashes',
-      title: 'Einzelwimpern Technik',
-      description: 'Natürliche 1:1 Wimpernverlängerung',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.45 (1).jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'lashes', 
-      title: 'Wimpernlifting + Färbung',
-      description: 'Natürliches Lifting für perfekte Wimpern',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.45 (2).jpeg',
+      title: 'Volume Wimpern',
+      description: 'Voluminöse und natürliche Wimpernverlängerung',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/lashes-volume.jpg',
       isBeforeAfter: false
     },
     // Nägel - Echte Designs
     {
       category: 'nails',
-      title: 'Bunte Nageldesign Kollektion',
-      description: 'Kreative French und Vollfarben Designs',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.51.jpeg',
+      title: 'Kunstvolle Nageldesigns',
+      description: 'Kreative und einzigartige Nagelkunst',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/nails-artistic.jpg',
       isBeforeAfter: false
     },
     {
       category: 'nails',
-      title: 'Chrome Mirror Effekt Nägel',
-      description: 'Luxuriöse spiegelnde Chrome-Maniküre',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.52.jpeg',
+      title: 'Elegante Schwarz-Gold Designs',
+      description: 'Luxuriöse Schwarz-Gold Maniküre',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/nails-black-gold.jpg',
       isBeforeAfter: false
     },
     {
       category: 'nails',
-      title: 'Elegante French Maniküre',
-      description: 'Klassische French mit modernem Touch',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (1).jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'nails',
-      title: 'Gel-Nagelmodellage',
-      description: 'Hochwertige Gelmodellage in Perfektion',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (2).jpeg', 
-      isBeforeAfter: false
-    },
-    {
-      category: 'nails',
-      title: 'Sommer Nagelkunst',
-      description: 'Frische sommerliche Nageldesigns',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.44 (3).jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'nails',
-      title: 'Babyboomer Style',
-      description: 'Eleganter natürlicher Babyboomer Look',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.46 (3).jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'nails',
-      title: 'Glitzer Akzente',
-      description: 'Glamouröse Glitzer-Details und Effekte',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.47 (1).jpeg',
-      isBeforeAfter: false
-    },
-    {
-      category: 'nails',
-      title: 'Marmor Effekt Design',
-      description: 'Kunstvoller Marmor-Look auf den Nägeln',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.47 (2).jpeg',
+      title: 'Natürliche Pink Töne',
+      description: 'Sanfte und natürliche Nageldesigns',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/nails-natural-pink.jpg',
       isBeforeAfter: false
     },
     // PMU & Brows
@@ -153,15 +118,22 @@ const GallerySection = () => {
       category: 'pmu',
       title: 'Permanent Make-up Augenbrauen',
       description: 'Professionelle PMU Technik für perfekte Brauen',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.45 (3).jpeg',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/pmu-brows-work.jpg',
+      isBeforeAfter: false
+    },
+    {
+      category: 'pmu',
+      title: 'Ombre PMU Technik',
+      description: 'Sanfter Ombre-Effekt für natürliche Augenbrauen',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/pmu-ombre.jpg',
       isBeforeAfter: false
     },
     {
       category: 'brows',
-      title: 'Browlifting Behandlung',
-      description: 'Augenbrauen-Lifting für die perfekte Form',
-      image: '/WhatsApp Image 2025-08-03 at 22.02.46 (1).jpeg',
-      isBeforeAfter: false
+      title: 'Browlifting Ergebnis',
+      description: 'Perfekte Augenbrauen-Form durch professionelles Lifting',
+      image: 'https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/browlifting-result.jpg',
+      isBeforeAfter: true
     },
     // Studio Setup
     {

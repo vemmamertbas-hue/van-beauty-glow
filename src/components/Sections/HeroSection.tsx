@@ -31,8 +31,8 @@ const HeroSection = () => {
           alt="Van Nagelstudio Interior"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/30"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent"></div>
       </div>
 
       {/* Hero Content */}
@@ -69,7 +69,7 @@ const HeroSection = () => {
               {/* Description */}
               <p className="text-lg sm:text-xl text-white/80 max-w-3xl mb-8 leading-relaxed animate-[hero-fade-in_1s_ease-out_0.9s_both]">
                 Seit über 20 Jahren stehen wir für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up in Osnabrück. 
-                Lass dich von Van & MaiLy verwöhnen.
+                Lass dich von Van & Maily verwöhnen.
               </p>
             </div>
 
@@ -77,7 +77,7 @@ const HeroSection = () => {
             <div className="animate-[hero-fade-in_1s_ease-out_0.6s_both] text-center lg:text-right">
               <div className="relative inline-block">
                 <img
-                  src="/WhatsApp Image 2025-08-03 at 22.02.44.jpeg"
+                  src="https://raw.githubusercontent.com/vemmamertbas-hue/van-beauty-glow/main/WhatsApp%20Image%202025-08-04%20at%2000.33.09.jpeg"
                   alt="Van & Maily - Mutter-Tochter Beauty Team"
                   className="w-full max-w-md mx-auto rounded-2xl shadow-2xl border-4 border-white/20 hover:scale-105 transition-all duration-500 filter brightness-110"
                 />

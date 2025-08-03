@@ -224,7 +224,7 @@ const ContactSection = () => {
               Bereit für deine Schönheits-Transformation?
             </h3>
             <p className="text-foreground/70 mb-6">
-              Lass uns gemeinsam deine Beauty-Träume verwirklichen. Van & MaiLy freuen sich darauf, 
+              Lass uns gemeinsam deine Beauty-Träume verwirklichen. Van & Maily freuen sich darauf, 
               dich in ihrem Studio zu verwöhnen.
             </p>
             <Button
