@@ -2,95 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Van Nagelstudio Design System - Elegante Rosé & Gold Palette */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Hauptfarben - Elegantes Rosé & Creme Design */
+    --background: 345 30% 98%;                    /* Sehr helles Rosé-Weiß */
+    --foreground: 345 15% 15%;                    /* Dunkles Rosé-Grau für Text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;                            /* Reines Weiß für Karten */
+    --card-foreground: 345 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 345 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primärfarbe - Elegantes Rosé */
+    --primary: 345 45% 75%;                       /* Warmes Rosé */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 345 55% 85%;                  /* Helles Rosé für Glow-Effekte */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sekundärfarbe - Cremeweiß */
+    --secondary: 45 25% 96%;                      /* Warmes Cremeweiß */
+    --secondary-foreground: 345 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Gold-Akzente */
+    --accent: 43 74% 66%;                         /* Warmes Gold */
+    --accent-foreground: 345 15% 15%;
+    --accent-glow: 43 84% 76%;                    /* Helles Gold für Highlights */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gedämpfte Farben */
+    --muted: 345 15% 95%;                         /* Sehr helles Rosé */
+    --muted-foreground: 345 8% 45%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 345 20% 90%;                        /* Sanfte Rosé-Grenze */
+    --input: 345 20% 95%;
+    --ring: 345 45% 75%;
 
-    --radius: 0.5rem;
+    /* Design-Tokens für Van Nagelstudio */
+    --radius: 0.75rem;                            /* Weichere Rundungen */
 
-    --sidebar-background: 0 0% 98%;
+    /* Gradients für elegante Übergänge */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(345 25% 95%), hsl(0 0% 100%));
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)), hsl(345 35% 96%));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Shadows für Tiefe */
+    --shadow-elegant: 0 10px 30px -10px hsl(345 45% 75% / 0.3);
+    --shadow-card: 0 4px 20px -5px hsl(345 45% 75% / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--accent-glow) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (falls benötigt) */
+    --sidebar-background: 345 30% 98%;
+    --sidebar-foreground: 345 15% 15%;
+    --sidebar-primary: 345 45% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 345 25% 92%;
+    --sidebar-accent-foreground: 345 15% 15%;
+    --sidebar-border: 345 20% 88%;
+    --sidebar-ring: 345 45% 75%;
   }
 
+  /* Dark Mode - Elegantes dunkles Rosé-Design */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 345 15% 8%;                     /* Dunkles Rosé-Schwarz */
+    --foreground: 345 10% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 345 15% 12%;
+    --card-foreground: 345 10% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 345 15% 12%;
+    --popover-foreground: 345 10% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 345 55% 70%;                       /* Helles Rosé für Dark Mode */
+    --primary-foreground: 345 15% 8%;
+    --primary-glow: 345 65% 80%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 345 10% 18%;
+    --secondary-foreground: 345 10% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 43 70% 60%;                         /* Gedämpftes Gold */
+    --accent-foreground: 345 15% 8%;
+    --accent-glow: 43 80% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 345 10% 15%;
+    --muted-foreground: 345 8% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 345 15% 20%;
+    --input: 345 15% 20%;
+    --ring: 345 55% 70%;
+    
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(345 15% 12%), hsl(345 15% 8%));
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)), hsl(345 15% 10%));
+    
+    --sidebar-background: 345 15% 8%;
+    --sidebar-foreground: 345 10% 95%;
+    --sidebar-primary: 345 55% 70%;
+    --sidebar-primary-foreground: 345 15% 8%;
+    --sidebar-accent: 345 10% 15%;
+    --sidebar-accent-foreground: 345 10% 95%;
+    --sidebar-border: 345 15% 18%;
+    --sidebar-ring: 345 55% 70%;
   }
 }
 
@@ -100,6 +125,129 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Typografie-System */
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Basis-Animationen für Van Nagelstudio */
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+
+  /* Glow-Effekte */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Hero-Animationen */
+  .hero-fade-in {
+    animation: hero-fade-in 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--accent));
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /* Parallax-Container */
+  .parallax-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+  }
+}
+
+@layer components {
+  /* Elegante Button-Stile */
+  .btn-hero {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-full font-medium tracking-wide;
+    @apply hover:scale-105 hover:shadow-lg transition-all duration-300;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r before:from-accent before:to-accent-glow before:opacity-0 before:transition-opacity before:duration-300;
+    @apply hover:before:opacity-100;
+  }
+
+  .btn-hero span {
+    @apply relative z-10;
+  }
+
+  /* Elegante Karten */
+  .card-elegant {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6;
+    @apply shadow-card hover:shadow-elegant transition-all duration-500;
+    @apply hover:scale-[1.02] hover:bg-card;
+  }
+
+  /* Service-Karten */
+  .service-card {
+    @apply group relative bg-gradient-to-br from-card to-secondary/30 rounded-2xl p-8 border border-border/30;
+    @apply hover:shadow-elegant hover:scale-[1.02] transition-all duration-500;
+    @apply hover:border-primary/30;
+  }
+
+  .service-icon {
+    @apply w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center text-primary-foreground;
+    @apply group-hover:scale-110 group-hover:rotate-3 transition-all duration-300;
+  }
+
+  /* Navigation */
+  .nav-glass {
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50;
+    @apply transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground font-medium transition-all duration-300;
+    @apply after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-accent;
+    @apply after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@keyframes hero-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(var(--accent));
   }
 }
