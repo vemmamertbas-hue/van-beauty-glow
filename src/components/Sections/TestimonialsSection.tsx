@@ -1,40 +1,33 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: "Aylin K.",
-      text: "Ich bin so dankbar für das Studio! Meine Nägel halten ewig und sehen immer gepflegt aus. Van berät super herzlich und professionell – 100 % Weiterempfehlung.",
-      rating: 5,
-      service: "Nageldesign",
-      avatar: "A"
-    },
-    {
-      name: "Lara Nguyen",
-      text: "Ich habe lange nach einem Kosmetikstudio gesucht, dem ich vertraue – bei Van & Maily fühle ich mich endlich angekommen. Die Wimpernverlängerung ist wunderschön natürlich.",
-      rating: 5,
-      service: "Wimpernverlängerung", 
-      avatar: "L"
-    },
-    {
-      name: "Elif M.",
-      text: "Die Atmosphäre im Studio ist einfach zum Wohlfühlen. Mein Permanent Make-up ist exakt so geworden, wie ich es mir vorgestellt habe. Top Arbeit, sehr hygienisch und einfühlsam.",
-      rating: 5,
-      service: "Permanent Make-up",
-      avatar: "E"
-    }
-  ];
-
-  return (
-    <section id="testimonials" className="section-padding bg-background section-divider">
+  const testimonials = [{
+    name: "Aylin K.",
+    text: "Ich bin so dankbar für das Studio! Meine Nägel halten ewig und sehen immer gepflegt aus. Van berät super herzlich und professionell – 100 % Weiterempfehlung.",
+    rating: 5,
+    service: "Nageldesign",
+    avatar: "A"
+  }, {
+    name: "Lara Nguyen",
+    text: "Ich habe lange nach einem Kosmetikstudio gesucht, dem ich vertraue – bei Van & Maily fühle ich mich endlich angekommen. Die Wimpernverlängerung ist wunderschön natürlich.",
+    rating: 5,
+    service: "Wimpernverlängerung",
+    avatar: "L"
+  }, {
+    name: "Elif M.",
+    text: "Die Atmosphäre im Studio ist einfach zum Wohlfühlen. Mein Permanent Make-up ist exakt so geworden, wie ich es mir vorgestellt habe. Top Arbeit, sehr hygienisch und einfühlsam.",
+    rating: 5,
+    service: "Permanent Make-up",
+    avatar: "E"
+  }];
+  return <section id="testimonials" className="section-padding bg-background section-divider">
       <div className="container-padding">
         <div className="section-header">
           <h2 className="heading-lg mb-6">
             Was unsere <span className="gradient-text">Kundinnen</span> sagen
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto text-pink-300">
             Über 500 zufriedene Kundinnen vertrauen bereits auf unsere Expertise
           </p>
           
@@ -42,9 +35,9 @@ const TestimonialsSection = () => {
           <div className="flex items-center justify-center mt-8">
             <div className="card-clean p-6 animate-[float_6s_ease-in-out_infinite]">
               <div className="flex items-center justify-center space-x-2 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-accent text-accent animate-[pulse-soft_2s_cubic-bezier(0.4,0,0.6,1)_infinite]" style={{ animationDelay: `${i * 0.1}s` }} />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-accent text-accent animate-[pulse-soft_2s_cubic-bezier(0.4,0,0.6,1)_infinite]" style={{
+                animationDelay: `${i * 0.1}s`
+              }} />)}
               </div>
               <div className="text-3xl font-bold gradient-text">5.0</div>
               <div className="text-sm text-muted">Basierend auf 500+ Bewertungen</div>
@@ -53,8 +46,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="card-elegant group relative overflow-hidden">
+          {testimonials.map((testimonial, index) => <Card key={index} className="card-elegant group relative overflow-hidden">
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-all duration-500">
                 <Quote className="w-8 h-8 text-primary" />
@@ -63,9 +55,7 @@ const TestimonialsSection = () => {
               <CardContent className="p-6">
                 {/* Rating */}
                 <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
 
                 {/* Review Text */}
@@ -91,8 +81,7 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Call to Action */}
@@ -108,9 +97,7 @@ const TestimonialsSection = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="flex items-center space-x-2 text-sm text-foreground/60">
                 <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
                 <span>5.0 Sterne • 500+ Bewertungen</span>
               </div>
@@ -138,8 +125,6 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;
