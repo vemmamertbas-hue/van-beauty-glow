@@ -53,7 +53,7 @@ const HeroSection = () => {
 
               {/* Main Headline */}
               <h1 className="heading-xl mb-6 animate-[hero-fade-in_1s_ease-out_0.5s_both] text-white">
-                Van Nagelstudio &{' '}
+                Van & Maily Nagelstudio &{' '}
                 <span className="gradient-text">
                   Cosmetics
                 </span>
@@ -69,8 +69,8 @@ const HeroSection = () => {
 
               {/* Description */}
               <p className="text-lg sm:text-xl text-white/80 max-w-3xl mb-8 leading-relaxed animate-[hero-fade-in_1s_ease-out_0.9s_both]">
-                Seit über 20 Jahren stehen wir für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up in Osnabrück. 
-                Lass dich von Van & Maily verwöhnen.
+                Van & Maily führen als Mutter-Tochter-Team seit über 25 Jahren unser Familienunternehmen und haben Platz 1 unter den Top 10 Nagelstudios in Osnabrück mit der besten Bewertung erreicht. 
+                Wir stehen für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up.
               </p>
             </div>
 

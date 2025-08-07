@@ -4,7 +4,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Phone, MessageCircle, Clock, Mail, Instagram, Facebook, Star } from 'lucide-react';
 
 const ContactSection = () => {
-  const whatsappUrl = "https://wa.me/491739857369?text=Hallo%20Van%20Nagelstudio%2C%20ich%20möchte%20gerne%20einen%20Termin%20vereinbaren.";
+  const whatsappUrlVan = "https://wa.me/491739857369?text=Hallo!%20Ich%20würde%20gerne%20einen%20Termin%20vereinbaren.";
+  const whatsappUrlMaily = "https://wa.me/4917656875845?text=Hallo!%20Ich%20würde%20gerne%20einen%20Termin%20vereinbaren.";
   
   const contactInfo = [
     {
@@ -15,20 +16,32 @@ const ContactSection = () => {
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp Termin",
-      content: "0173 9857369",
-      action: () => window.open(whatsappUrl, '_blank')
+      title: "WhatsApp Van",
+      content: "+49 173 9857369",
+      action: () => window.open(whatsappUrlVan, '_blank')
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp Maily", 
+      content: "+49 176 56875845",
+      action: () => window.open(whatsappUrlMaily, '_blank')
     },
     {
       icon: Phone,
-      title: "Telefonisch",
-      content: "0173 9857369",
-      action: () => window.open("tel:01739857369", '_blank')
+      title: "Telefon Van",
+      content: "+49 173 9857369",
+      action: () => window.open("tel:+491739857369", '_blank')
+    },
+    {
+      icon: Phone,
+      title: "Telefon Maily",
+      content: "+49 176 56875845", 
+      action: () => window.open("tel:+4917656875845", '_blank')
     },
     {
       icon: Clock,
       title: "Öffnungszeiten",
-      content: "Mo-Fr: 9:00-18:00\nSa: 9:00-16:00\nSo: Nach Vereinbarung"
+      content: "Mo: 09:00-18:00\nDi: 09:00-20:00\nMi: 09:00-18:00\nDo: 09:00-20:00\nFr: 09:00-18:00\nSa & So: geschlossen"
     }
   ];
 
@@ -62,7 +75,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
           <div className="space-y-6">
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {contactInfo.map((item, index) => (
                 <Card key={index} className="card-elegant group cursor-pointer" onClick={item.action}>
                   <CardContent className="p-6">
@@ -94,25 +107,24 @@ const ContactSection = () => {
               
               <div className="grid sm:grid-cols-2 gap-4">
                 <Button
-                  onClick={() => window.open(whatsappUrl, '_blank')}
+                  onClick={() => window.open(whatsappUrlVan, '_blank')}
                   className="btn-hero group h-14"
                 >
                   <MessageCircle className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
                   <div className="text-left">
-                    <div className="font-semibold">WhatsApp</div>
-                    <div className="text-xs opacity-90">Sofortige Antwort</div>
+                    <div className="font-semibold">WhatsApp Van</div>
+                    <div className="text-xs opacity-90">+49 173 9857369</div>
                   </div>
                 </Button>
 
                 <Button
-                  onClick={() => window.open("tel:01739857369", '_blank')}
-                  variant="outline"
-                  className="h-14 border-2 border-primary/30 hover:border-primary bg-card/50 backdrop-blur-sm hover:bg-primary/10 group"
+                  onClick={() => window.open(whatsappUrlMaily, '_blank')}
+                  className="btn-hero group h-14"
                 >
-                  <Phone className="w-5 h-5 mr-3 group-hover:animate-pulse" />
+                  <MessageCircle className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
                   <div className="text-left">
-                    <div className="font-semibold">Anrufen</div>
-                    <div className="text-xs opacity-70">0173 9857369</div>
+                    <div className="font-semibold">WhatsApp Maily</div>
+                    <div className="text-xs opacity-90">+49 176 56875845</div>
                   </div>
                 </Button>
               </div>
@@ -154,7 +166,7 @@ const ContactSection = () => {
               <div className="relative z-10 text-center p-8">
                 <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
                 <h3 className="font-playfair text-2xl font-semibold text-foreground mb-2">
-                  Van Nagelstudio & Cosmetics
+                  Van & Maily Nagelstudio & Cosmetics
                 </h3>
                 <p className="text-foreground/70 mb-4">
                   Natruper Str. 225<br />
@@ -174,12 +186,16 @@ const ContactSection = () => {
             <Card className="card-elegant">
               <CardContent className="p-6">
                 <h3 className="font-playfair text-xl font-semibold text-foreground mb-4">
-                  Warum Van Nagelstudio?
+                  Warum Van & Maily Nagelstudio?
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Star className="w-5 h-5 text-accent" />
-                    <span className="text-foreground/70">Über 20 Jahre Erfahrung im Beauty-Bereich</span>
+                    <span className="text-foreground/70">Platz 1 unter Top 10 Nagelstudios in Osnabrück</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Star className="w-5 h-5 text-accent" />
+                    <span className="text-foreground/70">Über 25 Jahre Erfahrung als Mutter-Tochter-Team</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Star className="w-5 h-5 text-accent" />
@@ -205,13 +221,17 @@ const ContactSection = () => {
             <Card className="bg-gradient-primary/20 backdrop-blur-sm border-primary/30">
               <CardContent className="p-6 text-center">
                 <h3 className="font-playfair text-xl font-semibold text-foreground mb-3">
-                  Wichtiger Hinweis
+                  Aktuelles & Stornierungsregeln
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">
-                  Für alle Behandlungen bitten wir um eine rechtzeitige Terminvereinbarung. 
-                  Bei Terminabsagen weniger als 24 Stunden vorher behalten wir uns vor, 
-                  50% der Behandlungskosten zu berechnen.
+                <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                  Für alle Behandlungen bitten wir um eine rechtzeitige Terminvereinbarung.
                 </p>
+                <div className="text-foreground/70 text-sm leading-relaxed space-y-2">
+                  <p><strong>Stornierungsregeln:</strong></p>
+                  <p>• Termine müssen mindestens 24 Stunden vorher abgesagt werden</p>
+                  <p>• Bei kurzfristigen Absagen wird 50% des Preises als Ausfallgebühr berechnet</p>
+                  <p>• Bei Permanent-Make-up-Terminen wird die 50€-Anzahlung einbehalten</p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -228,8 +248,8 @@ const ContactSection = () => {
               dich in ihrem Studio zu verwöhnen.
             </p>
             <Button
-              onClick={() => window.open(whatsappUrl, '_blank')}
-              className="btn-hero"
+              onClick={() => window.open(whatsappUrlVan, '_blank')}
+              className="btn-hero mr-2"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Jetzt Wunschtermin anfragen

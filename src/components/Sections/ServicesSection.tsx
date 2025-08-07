@@ -7,48 +7,49 @@ const ServicesSection = () => {
     {
       icon: Sparkles,
       title: "UV-Gel-Nägel",
-      description: "Langanhaltende, elegante Nagelkunst in perfekter Ausführung. Von klassischen Farben bis zu kunstvollen Designs.",
+      description: "Langanhaltende, elegante Nagelkunst mit sofortiger Aushärtung unter UV-Lampe. Kratzfest und gesünder als Acryl.",
       features: ["French Manicure", "Gel-Lacke", "Nail Art", "Reparaturen"],
-      duration: "90-120 Min",
-      highlight: "Hält bis zu 4 Wochen"
+      duration: "60-120 Min",
+      highlight: "Hält 3-5 Wochen"
     },
     {
       icon: Eye,
       title: "Wimpernverlängerung",
-      description: "Natürlich schöne, voluminöse Wimpern mit hypoallergenen Seidenwimpern und allergenfreiem Kleber.",
+      description: "Natürlich schöne, voluminöse Wimpern mit hypoallergenen Seidenwimpern. 1:1- und Volumen-Technik mit Refill-Service.",
       features: ["1:1 Technik", "Volumen-Technik", "Mega Volume", "Refill-Service"],
-      duration: "120-180 Min",
-      highlight: "Allergenfreier Kleber"
+      duration: "60-120 Min",
+      highlight: "Hält 3-5 Wochen"
     },
     {
       icon: Brush,
       title: "Permanent Make-up",
-      description: "Perfekte Augenbrauen, Lippen und Lidstriche für den natürlichen Look, der jeden Tag perfekt sitzt.",
+      description: "Perfekte Augenbrauen, Lippen und Lidstriche für den natürlichen Look. 50 € Anzahlung beim Beratungsgespräch, kostenlose Nachbehandlung inklusive.",
       features: ["Ombré Brows", "Powder Brows", "Härchenzeichnung", "Korrekturen"],
-      duration: "120-150 Min",
+      duration: "150-180 Min",
       highlight: "2-3 Jahre haltbar"
     },
     {
       icon: Eye,
       title: "Browlifting",
-      description: "Natürliches Lifting für deine Augenbrauen - fülliger, geschwungener und perfekt in Form.",
+      description: "Natürliches Lifting für volle, kräftige und perfekt geformte Augenbrauen - fülliger, geschwungener und perfekt in Form.",
       features: ["Laminierung", "Lifting", "Färbung", "Styling"],
       duration: "45-60 Min",
-      highlight: "6-8 Wochen sichtbar"
+      highlight: "Hält 5-7 Wochen"
     },
     {
       icon: Zap,
       title: "Zahnbleaching",
-      description: "Strahlend weiße Zähne mit professioneller, schonender Aufhellung für dein perfektes Lächeln.",
-      features: ["LED-Bleaching", "Schonende Gele", "Sofort-Ergebnis", "Nachbehandlung"],
-      duration: "60-90 Min",
-      highlight: "Bis zu 8 Nuancen heller"
+      description: "Strahlend weiße Zähne bis zu 9 Nuancen heller. Drei Pakete: Light (20 Min, bis 3 Nuancen), Master (40 Min, bis 5 Nuancen), Premium (60 Min, bis 9 Nuancen). Refresh innerhalb 2 Monaten möglich. Kosmetische Zahnaufhellung ohne Schmerzen oder Nebenwirkungen.",
+      features: ["LED-Bleaching", "3 Behandlungspakete", "Sofort-Ergebnis", "Refresh-Service"],
+      duration: "20-60 Min",
+      highlight: "Bis zu 9 Nuancen heller",
+      warning: "Nicht geeignet bei Implantaten, Kronen, Brücken, Veneers, Füllungen, abgestorbenen Wurzeln und Tetracyclin-Verfärbungen"
     },
     {
       icon: Scissors,
       title: "Haarentfernung (Waxing)",
-      description: "Sanfte, gründliche Haarentfernung mit hochwertigen Wachsen für wochenlang glatte Haut.",
-      features: ["Warmwachs", "Kaltwachs", "Intim-Bereich", "Gesicht & Körper"],
+      description: "Sanfte, gründliche Haarentfernung mit hochwertigem Warmwachs für wochenlang glatte Haut und feineres Haarwachstum.",
+      features: ["Warmwachs", "Intim-Bereich", "Gesicht & Körper", "Feineres Nachwachsen"],
       duration: "30-90 Min",
       highlight: "4-6 Wochen haarfrei"
     }
@@ -85,6 +86,13 @@ const ServicesSection = () => {
                 <p className="text-foreground/70 leading-relaxed">
                   {service.description}
                 </p>
+
+                {/* Warning for Zahnbleaching */}
+                {service.warning && (
+                  <div className="text-xs text-foreground/60 bg-amber-50 border border-amber-200 rounded-lg p-3 dark:bg-amber-900/20 dark:border-amber-700">
+                    <strong>Wichtiger Hinweis:</strong> {service.warning}
+                  </div>
+                )}
 
                 {/* Highlight Badge */}
                 <div className="inline-flex items-center bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-3 py-1">
