@@ -5,8 +5,9 @@ import heroImage from '@/assets/hero-studio.jpg';
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'Schönheit, die bleibt. Vertrauen, das wächst.';
-  const whatsappUrl = "https://wa.me/4917398573699?text=Hallo! Ich würde gerne einen Termin vereinbaren.";
+  const fullText = 'Schönheit, die bleibt. Vertrauen, das wächst. Familienbetrieb seit 2000.';
+  const whatsappUrlVan = "https://wa.me/491739857369?text=Hallo!%20Ich%20würde%20gerne%20einen%20Termin%20vereinbaren.%20%20";
+  const whatsappUrlMaily = "https://wa.me/4917656875845?text=Hallo!%20Ich%20würde%20gerne%20einen%20Termin%20vereinbaren.%20";
 
   useEffect(() => {
     let i = 0;
@@ -95,11 +96,19 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-[hero-fade-in_1s_ease-out_1.1s_both]">
             <Button
-              onClick={() => window.open(whatsappUrl, '_blank')}
+              onClick={() => window.open(whatsappUrlVan, '_blank')}
               className="btn-hero mobile-full sm:w-auto"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              <span>Jetzt Termin vereinbaren</span>
+              <span>Termin mit Van vereinbaren</span>
+            </Button>
+            
+            <Button
+              onClick={() => window.open(whatsappUrlMaily, '_blank')}
+              className="btn-hero mobile-full sm:w-auto"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              <span>Termin mit Maily vereinbaren</span>
             </Button>
             
             <Button
