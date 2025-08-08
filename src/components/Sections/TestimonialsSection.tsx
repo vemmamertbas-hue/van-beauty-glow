@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
           <h2 className="heading-lg mb-6">
             Was unsere <span className="gradient-text">Kundinnen</span> sagen
           </h2>
-          <p className="text-xl max-w-3xl mx-auto text-pink-300">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-foreground/80">
             Über 500 zufriedene Kundinnen vertrauen bereits auf unsere Expertise
           </p>
           
@@ -45,8 +45,8 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => <Card key={index} className="card-elegant group relative overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {testimonials.map((testimonial, index) => <Card key={index} className="card-elegant group relative overflow-hidden hover:scale-[1.02] transition-all duration-300">
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-all duration-500">
                 <Quote className="w-8 h-8 text-primary" />
@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-foreground/60">
           <div className="flex items-center group">
             <div className="w-2 h-2 bg-accent rounded-full mr-2 group-hover:scale-125 transition-transform duration-300"></div>
-            <span>Über 20 Jahre Erfahrung</span>
+            <span>Über 25 Jahre Erfahrung</span>
           </div>
           <div className="flex items-center group">
             <div className="w-2 h-2 bg-accent rounded-full mr-2 group-hover:scale-125 transition-transform duration-300"></div>

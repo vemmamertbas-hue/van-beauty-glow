@@ -272,52 +272,52 @@ const PricesSection = () => {
       }]
     }
   };
-  return <section id="prices" className="py-20 bg-gradient-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Unsere <span className="bg-gradient-primary bg-clip-text text-transparent">Preise</span>
+  return <section id="prices" className="section-padding bg-background">
+      <div className="container-padding">
+        <div className="section-header">
+          <h2 className="heading-lg mb-6">
+            Unsere <span className="gradient-text">Preise</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
             Transparente Preise für erstklassige Beauty-Behandlungen
           </p>
         </div>
 
         <Tabs defaultValue="nails" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 mb-8 bg-card/50 backdrop-blur-sm border border-border/30">
-            {Object.entries(priceCategories).map(([key, category]) => <TabsTrigger key={key} value={key} className="flex items-center space-x-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-                <span className="text-lg">{category.icon}</span>
-                <span className="hidden sm:inline">{category.title}</span>
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-7 mb-8 card-clean h-auto p-2">
+            {Object.entries(priceCategories).map(([key, category]) => <TabsTrigger key={key} value={key} className="flex flex-col items-center space-y-1 md:space-y-2 p-2 md:p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 hover:bg-primary/10">
+                <span className="text-lg md:text-xl">{category.icon}</span>
+                <span className="text-xs md:text-sm font-medium text-center leading-tight">{category.title}</span>
               </TabsTrigger>)}
           </TabsList>
 
-          {Object.entries(priceCategories).map(([key, category]) => <TabsContent key={key} value={key}>
-              <div className="grid md:grid-cols-2 gap-6">
-                {category.services.map((service, index) => <Card key={index} className="card-elegant group hover:scale-[1.01] transition-all duration-300">
-                    <CardHeader className="pb-4">
-                      <div className="flex justify-between items-start">
+          {Object.entries(priceCategories).map(([key, category]) => <TabsContent key={key} value={key} className="animate-fade-in">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                {category.services.map((service, index) => <Card key={index} className="card-elegant group hover:scale-[1.01] transition-all duration-300 hover:shadow-lg">
+                    <CardHeader className="pb-3 md:pb-4">
+                      <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0">
                         <div className="flex-1">
-                          <CardTitle className="text-lg font-playfair text-foreground group-hover:text-primary transition-colors duration-300">
+                          <CardTitle className="text-base md:text-lg font-playfair text-foreground group-hover:text-primary transition-colors duration-300 leading-tight">
                             {service.name}
                           </CardTitle>
-                          <p className="text-sm text-foreground/60 mt-1">{service.description}</p>
+                          <p className="text-xs md:text-sm text-foreground/60 mt-1">{service.description}</p>
                         </div>
-                        <div className="text-right">
-                          <div className="flex items-center text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                            <Euro className="w-5 h-5 mr-1" />
+                        <div className="text-right md:ml-4">
+                          <div className="flex items-center text-xl md:text-2xl font-bold gradient-text">
+                            <Euro className="w-4 h-4 md:w-5 md:h-5 mr-1" />
                             {service.price}
                           </div>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center text-sm text-foreground/70">
-                          <Clock className="w-4 h-4 mr-2" />
+                      <div className="flex flex-col md:flex-row items-start md:items-center justify-between space-y-2 md:space-y-0">
+                        <div className="flex items-center text-xs md:text-sm text-foreground/70">
+                          <Clock className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                           <span>{service.duration}</span>
                         </div>
-                        <Button size="sm" onClick={() => window.open(`${whatsappUrl}${encodeURIComponent(service.name)}%20vereinbaren.`, '_blank')} className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-primary-foreground opacity-0 group-hover:opacity-100 transition-all duration-300">
-                          <MessageCircle className="w-4 h-4 mr-1" />
+                        <Button size="sm" onClick={() => window.open(`${whatsappUrl}${encodeURIComponent(service.name)}%20vereinbaren.`, '_blank')} className="btn-primary text-xs md:text-sm px-3 py-1 md:px-4 md:py-2 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full md:w-auto">
+                          <MessageCircle className="w-3 h-3 md:w-4 md:h-4 mr-1" />
                           Buchen
                         </Button>
                       </div>

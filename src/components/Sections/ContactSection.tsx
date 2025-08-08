@@ -61,35 +61,35 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Kontakt & <span className="bg-gradient-primary bg-clip-text text-transparent">Terminbuchung</span>
+    <section id="contact" className="section-padding bg-background section-divider">
+      <div className="container-padding">
+        <div className="section-header">
+          <h2 className="heading-lg mb-6">
+            Kontakt & <span className="gradient-text">Terminbuchung</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
             Wir freuen uns darauf, dich in unserem Studio zu verwöhnen
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Contact Information */}
           <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {contactInfo.map((item, index) => (
-                <Card key={index} className="card-elegant group cursor-pointer" onClick={item.action}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
+                <Card key={index} className="card-elegant group cursor-pointer hover:scale-[1.02] transition-all duration-300" onClick={item.action}>
+                  <CardContent className="p-4 md:p-6">
+                    <div className="flex items-start space-x-3 md:space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <item.icon className="w-6 h-6 text-primary-foreground" />
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                        <h3 className="font-semibold text-sm md:text-base text-foreground mb-1 md:mb-2 group-hover:text-primary transition-colors duration-300">
                           {item.title}
                         </h3>
-                        <p className="text-foreground/70 text-sm whitespace-pre-line leading-relaxed">
+                        <p className="text-foreground/70 text-xs md:text-sm whitespace-pre-line leading-relaxed">
                           {item.content}
                         </p>
                       </div>
@@ -101,16 +101,16 @@ const ContactSection = () => {
 
             {/* Quick Actions */}
             <div className="space-y-4">
-              <h3 className="font-playfair text-2xl font-semibold text-foreground">
+              <h3 className="font-playfair text-xl md:text-2xl font-semibold text-foreground">
                 Schnell & einfach Termin vereinbaren
               </h3>
               
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                 <Button
                   onClick={() => window.open(whatsappUrlVan, '_blank')}
-                  className="btn-hero group h-14"
+                  className="btn-hero group h-12 md:h-14 text-sm md:text-base"
                 >
-                  <MessageCircle className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 group-hover:rotate-12 transition-transform duration-300" />
                   <div className="text-left">
                     <div className="font-semibold">WhatsApp Van</div>
                     <div className="text-xs opacity-90">+49 173 9857369</div>
@@ -119,9 +119,9 @@ const ContactSection = () => {
 
                 <Button
                   onClick={() => window.open(whatsappUrlMaily, '_blank')}
-                  className="btn-hero group h-14"
+                  className="btn-hero group h-12 md:h-14 text-sm md:text-base"
                 >
-                  <MessageCircle className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 group-hover:rotate-12 transition-transform duration-300" />
                   <div className="text-left">
                     <div className="font-semibold">WhatsApp Maily</div>
                     <div className="text-xs opacity-90">+49 176 56875845</div>
@@ -132,20 +132,20 @@ const ContactSection = () => {
 
             {/* Social Media */}
             <div className="space-y-4">
-              <h3 className="font-playfair text-2xl font-semibold text-foreground">
+              <h3 className="font-playfair text-xl md:text-2xl font-semibold text-foreground">
                 Folge uns für Inspiration
               </h3>
               
-              <div className="flex space-x-4">
+              <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
                 {socialLinks.map((social, index) => (
-                  <Card key={index} className="card-elegant group cursor-pointer flex-1" onClick={() => window.open(social.url, '_blank')}>
-                    <CardContent className="p-4">
+                  <Card key={index} className="card-elegant group cursor-pointer flex-1 hover:scale-[1.02] transition-all duration-300" onClick={() => window.open(social.url, '_blank')}>
+                    <CardContent className="p-3 md:p-4">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <social.icon className="w-5 h-5 text-primary-foreground" />
+                        <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <social.icon className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
                         </div>
                         <div>
-                          <div className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                          <div className="font-semibold text-sm md:text-base text-foreground group-hover:text-primary transition-colors duration-300">
                             {social.name}
                           </div>
                           <div className="text-xs text-foreground/60">{social.handle}</div>
@@ -238,22 +238,31 @@ const ContactSection = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-primary/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 max-w-2xl mx-auto">
-            <h3 className="font-playfair text-2xl font-semibold text-foreground mb-4">
+        <div className="mt-12 md:mt-16 text-center">
+          <div className="card-feature max-w-2xl mx-auto">
+            <h3 className="heading-md mb-4">
               Bereit für deine Schönheits-Transformation?
             </h3>
             <p className="text-foreground/70 mb-6">
               Lass uns gemeinsam deine Beauty-Träume verwirklichen. Van & Maily freuen sich darauf, 
               dich in ihrem Studio zu verwöhnen.
             </p>
-            <Button
-              onClick={() => window.open(whatsappUrlVan, '_blank')}
-              className="btn-hero mr-2"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Jetzt Wunschtermin anfragen
-            </Button>
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center">
+              <Button
+                onClick={() => window.open(whatsappUrlVan, '_blank')}
+                className="btn-hero w-full md:w-auto"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Van kontaktieren
+              </Button>
+              <Button
+                onClick={() => window.open(whatsappUrlMaily, '_blank')}
+                className="btn-hero w-full md:w-auto"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Maily kontaktieren
+              </Button>
+            </div>
           </div>
         </div>
       </div>

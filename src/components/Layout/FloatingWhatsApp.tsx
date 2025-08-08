@@ -20,28 +20,28 @@ const FloatingWhatsApp = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 animate-fade-in">
           {/* Floating Button */}
           <div 
             className={`
               group relative bg-green-500 hover:bg-green-600 text-white rounded-full 
               transition-all duration-500 cursor-pointer shadow-lg hover:shadow-xl
-              ${isExpanded ? 'w-64 h-16 rounded-2xl' : 'w-14 h-14'}
+              ${isExpanded ? 'w-48 h-12 md:w-64 md:h-16 rounded-2xl' : 'w-12 h-12 md:w-14 md:h-14'}
             `}
             onClick={isExpanded ? handleClick : () => setIsExpanded(true)}
             onMouseLeave={() => setIsExpanded(false)}
           >
             {/* Button Content */}
-            <div className="flex items-center justify-center h-full px-4">
+            <div className="flex items-center justify-center h-full px-2 md:px-4">
               {isExpanded ? (
-                <div className="flex items-center space-x-3 animate-slide-in-left">
-                  <MessageCircle className="w-6 h-6 flex-shrink-0" />
-                  <span className="font-medium text-sm whitespace-nowrap">
+                <div className="flex items-center space-x-2 md:space-x-3 animate-slide-in-left">
+                  <MessageCircle className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0" />
+                  <span className="font-medium text-xs md:text-sm whitespace-nowrap">
                     Jetzt Termin buchen
                   </span>
                 </div>
               ) : (
-                <MessageCircle className="w-7 h-7 animate-pulse-soft" />
+                <MessageCircle className="w-5 h-5 md:w-7 md:h-7 animate-pulse-soft" />
               )}
             </div>
 
@@ -49,7 +49,7 @@ const FloatingWhatsApp = () => {
             <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></div>
             
             {/* Notification Dot */}
-            <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse">
+            <div className="absolute -top-0.5 -right-0.5 md:-top-1 md:-right-1 w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full animate-pulse">
               <div className="absolute inset-0 rounded-full bg-red-500 animate-ping"></div>
             </div>
           </div>

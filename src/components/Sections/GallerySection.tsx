@@ -51,19 +51,19 @@ const GallerySection = () => {
     category: 'nails',
     title: 'Kunstvolle Nageldesigns',
     description: 'Kreative und einzigartige Nagelkunst',
-    image: '/src/assets/gallery/nails-artistic.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.48 (3).jpeg',
     isBeforeAfter: false
   }, {
     category: 'nails',
     title: 'Elegante Schwarz-Gold Designs',
     description: 'Luxuriöse Schwarz-Gold Maniküre',
-    image: '/src/assets/gallery/nails-black-gold.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.48 (4).jpeg',
     isBeforeAfter: false
   }, {
     category: 'nails',
     title: 'Natürliche Pink Töne',
     description: 'Sanfte und natürliche Nageldesigns',
-    image: '/src/assets/gallery/nails-natural-pink.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.50 (1).jpeg',
     isBeforeAfter: false
   },
   // Wimpern
@@ -71,13 +71,13 @@ const GallerySection = () => {
     category: 'lashes',
     title: 'Professionelle Wimpernverlängerung',
     description: 'Perfekte Volume-Technik für traumhafte Wimpern',
-    image: '/src/assets/gallery/lashes-application.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.48 (1).jpeg',
     isBeforeAfter: false
   }, {
     category: 'lashes',
     title: 'Volume Wimpern',
     description: 'Voluminöse und natürliche Wimpernverlängerung',
-    image: '/src/assets/gallery/lashes-volume.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.48 (2).jpeg',
     isBeforeAfter: false
   },
   // PMU & Brows
@@ -85,19 +85,19 @@ const GallerySection = () => {
     category: 'pmu',
     title: 'Permanent Make-up Augenbrauen',
     description: 'Professionelle PMU Technik für perfekte Brauen',
-    image: '/src/assets/gallery/pmu-brows-work.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.49 (1).jpeg',
     isBeforeAfter: false
   }, {
     category: 'pmu',
     title: 'Ombre PMU Technik',
     description: 'Sanfter Ombre-Effekt für natürliche Augenbrauen',
-    image: '/src/assets/gallery/pmu-ombre.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.49 (2).jpeg',
     isBeforeAfter: false
   }, {
     category: 'brows',
     title: 'Browlifting Ergebnis',
     description: 'Perfekte Augenbrauen-Form durch professionelles Lifting',
-    image: '/src/assets/gallery/browlifting-result.jpg',
+    image: '/WhatsApp Image 2025-08-03 at 22.02.49 (3).jpeg',
     isBeforeAfter: true
   },
   // Zertifikate - ALLE in richtiger Kategorie

@@ -120,6 +120,22 @@
 }
 
 @layer components {
+  /* Scroll Animation Classes */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .animate-on-scroll.animate-in {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .stagger-animation {
+    animation: scroll-reveal 0.6s ease-out forwards;
+  }
+  
+  .scale-on-hover {
+    @apply hover:scale-105 transition-transform duration-300;
+  }
   /* Clean Button System */
   .btn-primary {
     @apply bg-gradient-primary text-primary-foreground px-6 py-3 rounded-full font-medium;
@@ -177,7 +193,7 @@
 
   /* Section Spacing */
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-12 md:py-16 lg:py-20;
   }
 
   .container-padding {
@@ -206,9 +222,9 @@
   }
 
   /* Spacing System */
-  .space-section { @apply space-y-16 md:space-y-20 lg:space-y-24; }
-  .space-content { @apply space-y-6 md:space-y-8; }
-  .space-items { @apply space-y-4 md:space-y-6; }
+  .space-section { @apply space-y-12 md:space-y-16 lg:space-y-20; }
+  .space-content { @apply space-y-4 md:space-y-6; }
+  .space-items { @apply space-y-3 md:space-y-4; }
 
   /* Mobile-First Grid System */
   .grid-responsive {
@@ -221,7 +237,7 @@
 
   /* Section Structure */
   .section-header {
-    @apply text-center mb-12 md:mb-16 space-content;
+    @apply text-center mb-8 md:mb-12 space-content;
   }
 
   .section-divider {
@@ -288,4 +304,26 @@
 @keyframes pulse-soft {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
+}
+
+@keyframes scroll-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
