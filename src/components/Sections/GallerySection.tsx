@@ -211,7 +211,7 @@ const GallerySection = () => {
             <div className="text-sm text-muted">Kunstwerke erschaffen</div>
           </div>
           <div className="text-center p-6 card-clean hover:shadow-md transition-all duration-300">
-            <div className="text-3xl font-bold gradient-text mb-2">20+</div>
+            <div className="text-3xl font-bold gradient-text mb-2">25+</div>
             <div className="text-sm text-muted">Jahre Erfahrung</div>
           </div>
           <div className="text-center p-6 card-clean hover:shadow-md transition-all duration-300">

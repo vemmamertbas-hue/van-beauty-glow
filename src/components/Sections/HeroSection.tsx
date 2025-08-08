@@ -69,7 +69,7 @@ const HeroSection = () => {
 
               {/* Description */}
               <p className="text-lg sm:text-xl text-white/80 max-w-3xl mb-8 leading-relaxed animate-[hero-fade-in_1s_ease-out_0.9s_both]">
-                Van & Maily führen als Mutter-Tochter-Team seit über 25 Jahren unser Familienunternehmen und haben Platz 1 unter den Top 10 Nagelstudios in Osnabrück mit der besten Bewertung erreicht. 
+                <span className="font-semibold text-accent">#1 Nagelstudio in Osnabrück</span> - Van & Maily führen als Mutter-Tochter-Team seit <span className="font-semibold text-accent">25 Jahren</span> unser Familienunternehmen. 
                 Wir stehen für exklusive Nagelkunst, professionelle Wimpernverlängerung und elegantes Permanent Make-up.
               </p>
             </div>
@@ -124,7 +124,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-white/70 animate-[hero-fade-in_1s_ease-out_1.3s_both]">
             <div className="flex items-center">
               <Award className="w-4 h-4 text-accent mr-2" />
-              <span>20+ Jahre Erfahrung</span>
+              <span>25 Jahre Erfahrung</span>
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>

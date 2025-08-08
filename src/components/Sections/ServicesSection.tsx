@@ -7,40 +7,40 @@ const ServicesSection = () => {
     {
       icon: Sparkles,
       title: "UV-Gel-Nägel",
-      description: "Langanhaltende, elegante Nagelkunst mit sofortiger Aushärtung unter UV-Lampe. Kratzfest und gesünder als Acryl.",
-      features: ["French Manicure", "Gel-Lacke", "Nail Art", "Reparaturen"],
-      duration: "60-120 Min",
+      description: "Professionelle Nagelmodellage mit UV-Gel für langanhaltende, elegante Nägel. Sofortige Aushärtung unter UV-Lampe, kratzfest und gesünder als Acryl-Nägel.",
+      features: ["Neumodellage", "Auffüllen", "French & Designs", "Nail Art möglich"],
+      duration: "60-135 Min",
       highlight: "Hält 3-5 Wochen"
     },
     {
       icon: Eye,
       title: "Wimpernverlängerung",
-      description: "Natürlich schöne, voluminöse Wimpern mit hypoallergenen Seidenwimpern. 1:1- und Volumen-Technik mit Refill-Service.",
-      features: ["1:1 Technik", "Volumen-Technik", "Mega Volume", "Refill-Service"],
-      duration: "60-120 Min",
+      description: "Traumhafte Wimpern mit professioneller Verlängerung. Einzeltechnik (1:1) für den natürlichen Look oder Volumentechnik für maximales Drama. Hypoallergene Seidenwimpern mit regelmäßigem Refill-Service.",
+      features: ["1:1 Einzeltechnik", "Volumen-Technik", "Hypoallergene Wimpern", "Refill-Service"],
+      duration: "120-150 Min",
       highlight: "Hält 3-5 Wochen"
     },
     {
       icon: Brush,
       title: "Permanent Make-up",
-      description: "Perfekte Augenbrauen, Lippen und Lidstriche für den natürlichen Look. 50 € Anzahlung beim Beratungsgespräch, kostenlose Nachbehandlung inklusive.",
-      features: ["Ombré Brows", "Powder Brows", "Härchenzeichnung", "Korrekturen"],
-      duration: "150-180 Min",
+      description: "Perfekte Augenbrauen, Lippen und Lidstriche für den natürlichen Look. Professionelle PMU-Technik für langanhaltende Schönheit. 50€ Anzahlung beim Beratungsgespräch erforderlich, kostenlose Nachbehandlung inklusive.",
+      features: ["Augenbrauen PMU", "Lidstrich", "Lippen PMU", "Nachbehandlung inklusive"],
+      duration: "120-180 Min",
       highlight: "2-3 Jahre haltbar"
     },
     {
       icon: Eye,
       title: "Browlifting",
-      description: "Natürliches Lifting für volle, kräftige und perfekt geformte Augenbrauen - fülliger, geschwungener und perfekt in Form.",
-      features: ["Laminierung", "Lifting", "Färbung", "Styling"],
+      description: "Augenbrauen-Laminierung für natürlich voluminöse und perfekt geformte Brauen. Die Härchen werden geliftet, geglättet und in Form gebracht - für einen lang anhaltenden, natürlichen Look.",
+      features: ["Laminierung", "Natürlicher Lift", "Inklusive Färbung", "Perfekte Form"],
       duration: "45-60 Min",
       highlight: "Hält 5-7 Wochen"
     },
     {
       icon: Zap,
       title: "Zahnbleaching",
-      description: "Strahlend weiße Zähne bis zu 9 Nuancen heller. Drei Pakete: Light (20 Min, bis 3 Nuancen), Master (40 Min, bis 5 Nuancen), Premium (60 Min, bis 9 Nuancen). Refresh innerhalb 2 Monaten möglich. Kosmetische Zahnaufhellung ohne Schmerzen oder Nebenwirkungen.",
-      features: ["LED-Bleaching", "3 Behandlungspakete", "Sofort-Ergebnis", "Refresh-Service"],
+      description: "Kosmetische Zahnaufhellung für strahlend weiße Zähne - bis zu 9 Nuancen heller! Drei Pakete verfügbar: Light (20 Min, bis 3 Nuancen), Master (40 Min, bis 5 Nuancen), Premium (60 Min, bis 9 Nuancen). Refresh-Behandlung innerhalb 2 Monaten möglich.",
+      features: ["3 Pakete verfügbar", "Bis 9 Nuancen heller", "Schmerzfrei", "Refresh möglich"],
       duration: "20-60 Min",
       highlight: "Bis zu 9 Nuancen heller",
       warning: "Nicht geeignet bei Implantaten, Kronen, Brücken, Veneers, Füllungen, abgestorbenen Wurzeln und Tetracyclin-Verfärbungen"
@@ -48,9 +48,9 @@ const ServicesSection = () => {
     {
       icon: Scissors,
       title: "Haarentfernung (Waxing)",
-      description: "Sanfte, gründliche Haarentfernung mit hochwertigem Warmwachs für wochenlang glatte Haut und feineres Haarwachstum.",
-      features: ["Warmwachs", "Intim-Bereich", "Gesicht & Körper", "Feineres Nachwachsen"],
-      duration: "30-90 Min",
+      description: "Sanfte, professionelle Haarentfernung mit hochwertigem Warmwachs. Langanhaltend glatte Haut und mit der Zeit immer feineres Haarwachstum.",
+      features: ["Warmwachs-Technik", "Alle Körperbereiche", "Langanhaltende Glätte", "Feineres Nachwachsen"],
+      duration: "15-60 Min",
       highlight: "4-6 Wochen haarfrei"
     }
   ];
